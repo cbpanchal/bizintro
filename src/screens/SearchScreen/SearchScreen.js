@@ -5,6 +5,7 @@ import { Container, Content } from "native-base";
 import Header from "../../components/Header/CustomHeader";
 import UserSlider from '../../components/Contacts/Contacts';
 import CardScroll from "../../components/Card";
+import GoogleMap from '../../components/GoogleMap'
 import MapView from 'react-native-maps';
 
 const contacts = [
@@ -98,6 +99,53 @@ const cardArray = [
     },
 
 ];
+const markers = [
+    {
+      latlon: {
+        latitude: 41.881832,
+        longitude: -87.623177
+      },
+      title: 'Foo Place',
+      subtitle: '1234 Foo Drive',
+      image: 'https://assets.entrepreneur.com/images/misc/1485878297_Tai%20Lopez.png'
+    },
+    {
+      latlon: {
+        latitude: 41.434345,
+        longitude: -87.546576
+      },
+      title: 'Foo Place2',
+      subtitle: '1234 Foo Drive2',
+      image: 'https://digitalmarketer.id/wp-content/uploads/2017/02/31.jpg'
+    },
+    {
+      latlon: {
+        latitude: 41.212121,
+        longitude: -87.323232
+      },
+      title: 'Foo Place3',
+      subtitle: '1234 Foo Drive3',
+      image: 'https://banner2.kisspng.com/20180401/jeq/kisspng-tai-lopez-investor-business-adviser-entrepreneursh-entrepreneur-5ac112da1d0ea0.3948194615226027141191.jpg'
+    },
+    {
+      latlon: {
+        latitude: 41.012121,
+        longitude: -87.343434
+      },
+      title: 'Foo Place4',
+      subtitle: '1234 Foo Drive4',
+      image: 'http://www.tomferry.com/wp-content/uploads/2017/05/tom-oracle.png'
+    },
+    {
+      latlon: {
+        latitude: 41.989898,
+        longitude: -87.878787
+      },
+      title: 'Foo Place5',
+      subtitle: '1234 Foo Drive5',
+      image: 'https://assets.entrepreneur.com/images/misc/1494364563_Gary%20Vaynerchuk2.png'
+    },
+  ];
 class SearchScreen extends Component {
     constructor(props) {
         super(props);
@@ -116,17 +164,15 @@ class SearchScreen extends Component {
                     </View>
                     <UserSlider items={contacts} />
                     <CardScroll items={cardArray} />
-                    <View style={styles.mapContainer}>
-                        <MapView
-                        style={styles.map}
-                        region={{
+                    <GoogleMap 
+                        defaultRegion={{
                             latitude: 37.78825,
                             longitude: -122.4324,
                             latitudeDelta: 0.015,
                             longitudeDelta: 0.0121,
                         }}
-                        />
-                    </View>
+                        items={markers}
+                    />
                 </Content>
             </Container>
         );
