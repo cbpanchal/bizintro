@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/upforce4/Workspace/Projects/bizintro/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v21/values-v21.xml",
+            "outputFile": "/Users/upforce/Workspace/bizintro/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v21/values-v21.xml",
             "map": [
                 {
-                    "source": "/Users/upforce4/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/9a1ab2c4ec674f3f4a159bd79eccf24b/res/values-v21/values-v21.xml",
+                    "source": "/Users/upforce/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/4ea147bd089bfe60a47a74139d3cb13f/res/values-v21/values-v21.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,17,19,20,21,22,24,26,27,28,29,30,32,34,36,38,40,42,43,48,50,52,53,54,56,58,59,60,61,62,63,107,110,154,157,160,162,164,166,169,171,174,175,176,179,180,181,182,183,184,187,188,190,192,194,196,200,202,203,204,205,207,211,213,215,216,217,218,219,221,222,223,233,234,235,247",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/Users/upforce4/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/ed3215e883661c3ec1c712857462935a/res/values-v21/values-v21.xml",
+                    "source": "/Users/upforce/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/af0fb53642ff531f2db87af86e278774/res/values-v21/values-v21.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,13",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",

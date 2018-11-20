@@ -1,153 +1,153 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/upforce4/Workspace/Projects/bizintro/android/app/src/main/AndroidManifest.xml:1:1-26:12
-INJECTED from /Users/upforce4/Workspace/Projects/bizintro/android/app/src/main/AndroidManifest.xml:1:1-26:12
-INJECTED from /Users/upforce4/Workspace/Projects/bizintro/android/app/src/main/AndroidManifest.xml:1:1-26:12
-INJECTED from /Users/upforce4/Workspace/Projects/bizintro/android/app/src/main/AndroidManifest.xml:1:1-26:12
-MERGED from [com.facebook.react:react-native:0.57.5] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/react-native-0.57.5.aar/a9502fd7d2cc94b6f6ab1ef31b711e51/AndroidManifest.xml:2:1-15:12
-MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/9a1ab2c4ec674f3f4a159bd79eccf24b/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-fragment:27.1.1] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/1e80d6fc1f79ea62b05324ae94806933/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/5523502996ff336f665e635366d656a2/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:27.1.1] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/6cbdd32a170663c5dfe40fe1651c6e3b/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:27.1.1] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/41a89973493d6912eb65e7ee335d73d5/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/f754dfdd85b1e6174468ef2bfe303504/AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:27.1.1] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/ed3215e883661c3ec1c712857462935a/AndroidManifest.xml:17:1-22:12
-MERGED from [com.facebook.fresco:fresco:1.10.0] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/fresco-1.10.0.aar/f35b835b8accd273e3c2437c87a5a469/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.10.0] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-1.10.0.aar/2f8bbab8ed6ac3f5ea01d5b7b6f263e1/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:drawee:1.10.0] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/drawee-1.10.0.aar/9a3a76044ae9bcff0aad61b78e91c39a/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:imagepipeline:1.10.0] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/imagepipeline-1.10.0.aar/b1870771878fac54e8a39f7232b0b5a3/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:imagepipeline-base:1.10.0] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-1.10.0.aar/85b706b7a56228da9239b7922f183589/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.soloader:soloader:0.5.1] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/soloader-0.5.1.aar/fe10ec948436a763ab6fc0aa874dee7a/AndroidManifest.xml:2:1-13:12
-MERGED from [org.webkit:android-jsc:r174650] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/android-jsc-r174650.aar/cf0bb0c306d794ae50746be719ee1758/AndroidManifest.xml:1:1-3:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/636d0c40942e17078734326b931d4b94/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/fe9dbeb646ac188a17d3c73eac1997b6/AndroidManifest.xml:17:1-22:12
-MERGED from [com.facebook.fresco:fbcore:1.10.0] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/fbcore-1.10.0.aar/46379d86f2451a6f0f6e6581a495cef4/AndroidManifest.xml:2:1-9:12
-MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/8d2d22636187ed0b48baeb8caa705482/AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.0] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/899a4b747d2b03e93f5cece083bcc1d3/AndroidManifest.xml:17:1-22:12
-INJECTED from /Users/upforce4/Workspace/Projects/bizintro/android/app/src/main/AndroidManifest.xml:1:1-26:12
-INJECTED from /Users/upforce4/Workspace/Projects/bizintro/android/app/src/main/AndroidManifest.xml:1:1-26:12
-INJECTED from /Users/upforce4/Workspace/Projects/bizintro/android/app/src/main/AndroidManifest.xml:1:1-26:12
+ADDED from /Users/upforce/Workspace/bizintro/android/app/src/main/AndroidManifest.xml:1:1-26:12
+INJECTED from /Users/upforce/Workspace/bizintro/android/app/src/main/AndroidManifest.xml:1:1-26:12
+INJECTED from /Users/upforce/Workspace/bizintro/android/app/src/main/AndroidManifest.xml:1:1-26:12
+INJECTED from /Users/upforce/Workspace/bizintro/android/app/src/main/AndroidManifest.xml:1:1-26:12
+MERGED from [com.facebook.react:react-native:0.57.5] /Users/upforce/.gradle/caches/transforms-1/files-1.1/react-native-0.57.5.aar/8993a9190e6538a792e9536fd65b11d5/AndroidManifest.xml:2:1-15:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/upforce/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/4ea147bd089bfe60a47a74139d3cb13f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/upforce/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/8e4ff8bccef149266ff6c76bff53d9b7/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/upforce/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/51f75ceffcb99e282f7dddd49d505838/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/upforce/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/0385e4f7c143f0d9f6a62d82aa9712ec/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/upforce/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/a0e39ba385a3d203da647ccc52f98a7b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/upforce/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/5de6135d97293630d535046f095c1b43/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] /Users/upforce/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/af0fb53642ff531f2db87af86e278774/AndroidManifest.xml:17:1-22:12
+MERGED from [com.facebook.fresco:fresco:1.10.0] /Users/upforce/.gradle/caches/transforms-1/files-1.1/fresco-1.10.0.aar/3f28bd20d0187b7766e84f4468a6dcba/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.10.0] /Users/upforce/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-1.10.0.aar/0366e50f3bc9437f0e9cb2f35d8833e4/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:drawee:1.10.0] /Users/upforce/.gradle/caches/transforms-1/files-1.1/drawee-1.10.0.aar/e9ef17903081cf4c2410222874afae89/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline:1.10.0] /Users/upforce/.gradle/caches/transforms-1/files-1.1/imagepipeline-1.10.0.aar/9cc5fa22de9ec31c01281ff6ce29062b/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-base:1.10.0] /Users/upforce/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-1.10.0.aar/d51588c45c05856d71abf49b22979e83/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.soloader:soloader:0.5.1] /Users/upforce/.gradle/caches/transforms-1/files-1.1/soloader-0.5.1.aar/815d9aa4444a3d0c3e72d75d62065439/AndroidManifest.xml:2:1-13:12
+MERGED from [org.webkit:android-jsc:r174650] /Users/upforce/.gradle/caches/transforms-1/files-1.1/android-jsc-r174650.aar/cfb868b82df4d96aec3dc882335ee5ad/AndroidManifest.xml:1:1-3:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/upforce/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/3d7bb42f1cfee324be3bed7169c673f3/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/upforce/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/462b3cb8bdc3ebce9c9b5ffe78ae6769/AndroidManifest.xml:17:1-22:12
+MERGED from [com.facebook.fresco:fbcore:1.10.0] /Users/upforce/.gradle/caches/transforms-1/files-1.1/fbcore-1.10.0.aar/8c602d370087c0100d82ab01ca395a73/AndroidManifest.xml:2:1-9:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/upforce/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/c8bbe9450cbf032fdbbb0f8b811f14e2/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] /Users/upforce/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/83e2042dbb17c6d56c4dfe77d3fe9280/AndroidManifest.xml:17:1-22:12
+INJECTED from /Users/upforce/Workspace/bizintro/android/app/src/main/AndroidManifest.xml:1:1-26:12
+INJECTED from /Users/upforce/Workspace/bizintro/android/app/src/main/AndroidManifest.xml:1:1-26:12
+INJECTED from /Users/upforce/Workspace/bizintro/android/app/src/main/AndroidManifest.xml:1:1-26:12
 	package
-		ADDED from /Users/upforce4/Workspace/Projects/bizintro/android/app/src/main/AndroidManifest.xml:2:5-27
-		INJECTED from /Users/upforce4/Workspace/Projects/bizintro/android/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/upforce4/Workspace/Projects/bizintro/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/upforce/Workspace/bizintro/android/app/src/main/AndroidManifest.xml:2:5-27
+		INJECTED from /Users/upforce/Workspace/bizintro/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/upforce/Workspace/bizintro/android/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from /Users/upforce4/Workspace/Projects/bizintro/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/upforce4/Workspace/Projects/bizintro/android/app/src/main/AndroidManifest.xml:1:1-26:12
-		INJECTED from /Users/upforce4/Workspace/Projects/bizintro/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/upforce/Workspace/bizintro/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/upforce/Workspace/bizintro/android/app/src/main/AndroidManifest.xml:1:1-26:12
+		INJECTED from /Users/upforce/Workspace/bizintro/android/app/src/main/AndroidManifest.xml
 	android:versionCode
-		INJECTED from /Users/upforce4/Workspace/Projects/bizintro/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/upforce4/Workspace/Projects/bizintro/android/app/src/main/AndroidManifest.xml:1:1-26:12
-		INJECTED from /Users/upforce4/Workspace/Projects/bizintro/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/upforce/Workspace/bizintro/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/upforce/Workspace/bizintro/android/app/src/main/AndroidManifest.xml:1:1-26:12
+		INJECTED from /Users/upforce/Workspace/bizintro/android/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/upforce4/Workspace/Projects/bizintro/android/app/src/main/AndroidManifest.xml:1:11-69
+		ADDED from /Users/upforce/Workspace/bizintro/android/app/src/main/AndroidManifest.xml:1:11-69
 uses-permission#android.permission.INTERNET
-ADDED from /Users/upforce4/Workspace/Projects/bizintro/android/app/src/main/AndroidManifest.xml:4:5-67
+ADDED from /Users/upforce/Workspace/bizintro/android/app/src/main/AndroidManifest.xml:4:5-67
 	android:name
-		ADDED from /Users/upforce4/Workspace/Projects/bizintro/android/app/src/main/AndroidManifest.xml:4:22-64
+		ADDED from /Users/upforce/Workspace/bizintro/android/app/src/main/AndroidManifest.xml:4:22-64
 uses-permission#android.permission.SYSTEM_ALERT_WINDOW
-ADDED from /Users/upforce4/Workspace/Projects/bizintro/android/app/src/main/AndroidManifest.xml:5:5-77
-MERGED from [com.facebook.react:react-native:0.57.5] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/react-native-0.57.5.aar/a9502fd7d2cc94b6f6ab1ef31b711e51/AndroidManifest.xml:11:5-78
-MERGED from [com.facebook.react:react-native:0.57.5] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/react-native-0.57.5.aar/a9502fd7d2cc94b6f6ab1ef31b711e51/AndroidManifest.xml:11:5-78
+ADDED from /Users/upforce/Workspace/bizintro/android/app/src/main/AndroidManifest.xml:5:5-77
+MERGED from [com.facebook.react:react-native:0.57.5] /Users/upforce/.gradle/caches/transforms-1/files-1.1/react-native-0.57.5.aar/8993a9190e6538a792e9536fd65b11d5/AndroidManifest.xml:11:5-78
+MERGED from [com.facebook.react:react-native:0.57.5] /Users/upforce/.gradle/caches/transforms-1/files-1.1/react-native-0.57.5.aar/8993a9190e6538a792e9536fd65b11d5/AndroidManifest.xml:11:5-78
 	android:name
-		ADDED from /Users/upforce4/Workspace/Projects/bizintro/android/app/src/main/AndroidManifest.xml:5:22-75
+		ADDED from /Users/upforce/Workspace/bizintro/android/app/src/main/AndroidManifest.xml:5:22-75
 application
-ADDED from /Users/upforce4/Workspace/Projects/bizintro/android/app/src/main/AndroidManifest.xml:7:5-24:19
-MERGED from [com.facebook.react:react-native:0.57.5] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/react-native-0.57.5.aar/a9502fd7d2cc94b6f6ab1ef31b711e51/AndroidManifest.xml:13:5-20
-MERGED from [com.facebook.react:react-native:0.57.5] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/react-native-0.57.5.aar/a9502fd7d2cc94b6f6ab1ef31b711e51/AndroidManifest.xml:13:5-20
-MERGED from [com.facebook.soloader:soloader:0.5.1] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/soloader-0.5.1.aar/fe10ec948436a763ab6fc0aa874dee7a/AndroidManifest.xml:11:5-20
-MERGED from [com.facebook.soloader:soloader:0.5.1] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/soloader-0.5.1.aar/fe10ec948436a763ab6fc0aa874dee7a/AndroidManifest.xml:11:5-20
-MERGED from [org.webkit:android-jsc:r174650] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/android-jsc-r174650.aar/cf0bb0c306d794ae50746be719ee1758/AndroidManifest.xml:2:3-17
-MERGED from [org.webkit:android-jsc:r174650] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/android-jsc-r174650.aar/cf0bb0c306d794ae50746be719ee1758/AndroidManifest.xml:2:3-17
+ADDED from /Users/upforce/Workspace/bizintro/android/app/src/main/AndroidManifest.xml:7:5-24:19
+MERGED from [com.facebook.react:react-native:0.57.5] /Users/upforce/.gradle/caches/transforms-1/files-1.1/react-native-0.57.5.aar/8993a9190e6538a792e9536fd65b11d5/AndroidManifest.xml:13:5-20
+MERGED from [com.facebook.react:react-native:0.57.5] /Users/upforce/.gradle/caches/transforms-1/files-1.1/react-native-0.57.5.aar/8993a9190e6538a792e9536fd65b11d5/AndroidManifest.xml:13:5-20
+MERGED from [com.facebook.soloader:soloader:0.5.1] /Users/upforce/.gradle/caches/transforms-1/files-1.1/soloader-0.5.1.aar/815d9aa4444a3d0c3e72d75d62065439/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.soloader:soloader:0.5.1] /Users/upforce/.gradle/caches/transforms-1/files-1.1/soloader-0.5.1.aar/815d9aa4444a3d0c3e72d75d62065439/AndroidManifest.xml:11:5-20
+MERGED from [org.webkit:android-jsc:r174650] /Users/upforce/.gradle/caches/transforms-1/files-1.1/android-jsc-r174650.aar/cfb868b82df4d96aec3dc882335ee5ad/AndroidManifest.xml:2:3-17
+MERGED from [org.webkit:android-jsc:r174650] /Users/upforce/.gradle/caches/transforms-1/files-1.1/android-jsc-r174650.aar/cfb868b82df4d96aec3dc882335ee5ad/AndroidManifest.xml:2:3-17
 	android:label
-		ADDED from /Users/upforce4/Workspace/Projects/bizintro/android/app/src/main/AndroidManifest.xml:9:7-39
+		ADDED from /Users/upforce/Workspace/bizintro/android/app/src/main/AndroidManifest.xml:9:7-39
 	android:icon
-		ADDED from /Users/upforce4/Workspace/Projects/bizintro/android/app/src/main/AndroidManifest.xml:10:7-41
+		ADDED from /Users/upforce/Workspace/bizintro/android/app/src/main/AndroidManifest.xml:10:7-41
 	android:allowBackup
-		ADDED from /Users/upforce4/Workspace/Projects/bizintro/android/app/src/main/AndroidManifest.xml:11:7-34
+		ADDED from /Users/upforce/Workspace/bizintro/android/app/src/main/AndroidManifest.xml:11:7-34
 	android:theme
-		ADDED from /Users/upforce4/Workspace/Projects/bizintro/android/app/src/main/AndroidManifest.xml:12:7-38
+		ADDED from /Users/upforce/Workspace/bizintro/android/app/src/main/AndroidManifest.xml:12:7-38
 	android:name
-		ADDED from /Users/upforce4/Workspace/Projects/bizintro/android/app/src/main/AndroidManifest.xml:8:7-38
+		ADDED from /Users/upforce/Workspace/bizintro/android/app/src/main/AndroidManifest.xml:8:7-38
 activity#com.bizintro.MainActivity
-ADDED from /Users/upforce4/Workspace/Projects/bizintro/android/app/src/main/AndroidManifest.xml:13:7-22:18
+ADDED from /Users/upforce/Workspace/bizintro/android/app/src/main/AndroidManifest.xml:13:7-22:18
 	android:label
-		ADDED from /Users/upforce4/Workspace/Projects/bizintro/android/app/src/main/AndroidManifest.xml:15:9-41
+		ADDED from /Users/upforce/Workspace/bizintro/android/app/src/main/AndroidManifest.xml:15:9-41
 	android:windowSoftInputMode
-		ADDED from /Users/upforce4/Workspace/Projects/bizintro/android/app/src/main/AndroidManifest.xml:17:9-51
+		ADDED from /Users/upforce/Workspace/bizintro/android/app/src/main/AndroidManifest.xml:17:9-51
 	android:configChanges
-		ADDED from /Users/upforce4/Workspace/Projects/bizintro/android/app/src/main/AndroidManifest.xml:16:9-79
+		ADDED from /Users/upforce/Workspace/bizintro/android/app/src/main/AndroidManifest.xml:16:9-79
 	android:name
-		ADDED from /Users/upforce4/Workspace/Projects/bizintro/android/app/src/main/AndroidManifest.xml:14:9-37
+		ADDED from /Users/upforce/Workspace/bizintro/android/app/src/main/AndroidManifest.xml:14:9-37
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/upforce4/Workspace/Projects/bizintro/android/app/src/main/AndroidManifest.xml:18:9-21:25
+ADDED from /Users/upforce/Workspace/bizintro/android/app/src/main/AndroidManifest.xml:18:9-21:25
 action#android.intent.action.MAIN
-ADDED from /Users/upforce4/Workspace/Projects/bizintro/android/app/src/main/AndroidManifest.xml:19:13-65
+ADDED from /Users/upforce/Workspace/bizintro/android/app/src/main/AndroidManifest.xml:19:13-65
 	android:name
-		ADDED from /Users/upforce4/Workspace/Projects/bizintro/android/app/src/main/AndroidManifest.xml:19:21-62
+		ADDED from /Users/upforce/Workspace/bizintro/android/app/src/main/AndroidManifest.xml:19:21-62
 category#android.intent.category.LAUNCHER
-ADDED from /Users/upforce4/Workspace/Projects/bizintro/android/app/src/main/AndroidManifest.xml:20:13-73
+ADDED from /Users/upforce/Workspace/bizintro/android/app/src/main/AndroidManifest.xml:20:13-73
 	android:name
-		ADDED from /Users/upforce4/Workspace/Projects/bizintro/android/app/src/main/AndroidManifest.xml:20:23-70
+		ADDED from /Users/upforce/Workspace/bizintro/android/app/src/main/AndroidManifest.xml:20:23-70
 activity#com.facebook.react.devsupport.DevSettingsActivity
-ADDED from /Users/upforce4/Workspace/Projects/bizintro/android/app/src/main/AndroidManifest.xml:23:7-84
+ADDED from /Users/upforce/Workspace/bizintro/android/app/src/main/AndroidManifest.xml:23:7-84
 	android:name
-		ADDED from /Users/upforce4/Workspace/Projects/bizintro/android/app/src/main/AndroidManifest.xml:23:17-81
+		ADDED from /Users/upforce/Workspace/bizintro/android/app/src/main/AndroidManifest.xml:23:17-81
 uses-sdk
-INJECTED from /Users/upforce4/Workspace/Projects/bizintro/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /Users/upforce4/Workspace/Projects/bizintro/android/app/src/main/AndroidManifest.xml
-INJECTED from /Users/upforce4/Workspace/Projects/bizintro/android/app/src/main/AndroidManifest.xml
-MERGED from [com.facebook.react:react-native:0.57.5] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/react-native-0.57.5.aar/a9502fd7d2cc94b6f6ab1ef31b711e51/AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.react:react-native:0.57.5] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/react-native-0.57.5.aar/a9502fd7d2cc94b6f6ab1ef31b711e51/AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/9a1ab2c4ec674f3f4a159bd79eccf24b/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/9a1ab2c4ec674f3f4a159bd79eccf24b/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.1.1] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/1e80d6fc1f79ea62b05324ae94806933/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.1.1] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/1e80d6fc1f79ea62b05324ae94806933/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/5523502996ff336f665e635366d656a2/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/5523502996ff336f665e635366d656a2/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.1] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/6cbdd32a170663c5dfe40fe1651c6e3b/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.1] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/6cbdd32a170663c5dfe40fe1651c6e3b/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.1] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/41a89973493d6912eb65e7ee335d73d5/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.1] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/41a89973493d6912eb65e7ee335d73d5/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/f754dfdd85b1e6174468ef2bfe303504/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/f754dfdd85b1e6174468ef2bfe303504/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.1] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/ed3215e883661c3ec1c712857462935a/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.1] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/ed3215e883661c3ec1c712857462935a/AndroidManifest.xml:20:5-44
-MERGED from [com.facebook.fresco:fresco:1.10.0] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/fresco-1.10.0.aar/f35b835b8accd273e3c2437c87a5a469/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:fresco:1.10.0] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/fresco-1.10.0.aar/f35b835b8accd273e3c2437c87a5a469/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.10.0] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-1.10.0.aar/2f8bbab8ed6ac3f5ea01d5b7b6f263e1/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.10.0] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-1.10.0.aar/2f8bbab8ed6ac3f5ea01d5b7b6f263e1/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:drawee:1.10.0] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/drawee-1.10.0.aar/9a3a76044ae9bcff0aad61b78e91c39a/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:drawee:1.10.0] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/drawee-1.10.0.aar/9a3a76044ae9bcff0aad61b78e91c39a/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline:1.10.0] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/imagepipeline-1.10.0.aar/b1870771878fac54e8a39f7232b0b5a3/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline:1.10.0] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/imagepipeline-1.10.0.aar/b1870771878fac54e8a39f7232b0b5a3/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-base:1.10.0] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-1.10.0.aar/85b706b7a56228da9239b7922f183589/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-base:1.10.0] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-1.10.0.aar/85b706b7a56228da9239b7922f183589/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.soloader:soloader:0.5.1] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/soloader-0.5.1.aar/fe10ec948436a763ab6fc0aa874dee7a/AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.soloader:soloader:0.5.1] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/soloader-0.5.1.aar/fe10ec948436a763ab6fc0aa874dee7a/AndroidManifest.xml:7:5-9:41
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/636d0c40942e17078734326b931d4b94/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/636d0c40942e17078734326b931d4b94/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/fe9dbeb646ac188a17d3c73eac1997b6/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/fe9dbeb646ac188a17d3c73eac1997b6/AndroidManifest.xml:20:5-44
-MERGED from [com.facebook.fresco:fbcore:1.10.0] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/fbcore-1.10.0.aar/46379d86f2451a6f0f6e6581a495cef4/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:fbcore:1.10.0] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/fbcore-1.10.0.aar/46379d86f2451a6f0f6e6581a495cef4/AndroidManifest.xml:5:5-7:41
-MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/8d2d22636187ed0b48baeb8caa705482/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/8d2d22636187ed0b48baeb8caa705482/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.0] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/899a4b747d2b03e93f5cece083bcc1d3/AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.0] /Users/upforce4/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/899a4b747d2b03e93f5cece083bcc1d3/AndroidManifest.xml:20:5-44
-INJECTED from /Users/upforce4/Workspace/Projects/bizintro/android/app/src/main/AndroidManifest.xml
-INJECTED from /Users/upforce4/Workspace/Projects/bizintro/android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/upforce/Workspace/bizintro/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/upforce/Workspace/bizintro/android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/upforce/Workspace/bizintro/android/app/src/main/AndroidManifest.xml
+MERGED from [com.facebook.react:react-native:0.57.5] /Users/upforce/.gradle/caches/transforms-1/files-1.1/react-native-0.57.5.aar/8993a9190e6538a792e9536fd65b11d5/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.57.5] /Users/upforce/.gradle/caches/transforms-1/files-1.1/react-native-0.57.5.aar/8993a9190e6538a792e9536fd65b11d5/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/upforce/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/4ea147bd089bfe60a47a74139d3cb13f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/upforce/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/4ea147bd089bfe60a47a74139d3cb13f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/upforce/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/8e4ff8bccef149266ff6c76bff53d9b7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/upforce/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/8e4ff8bccef149266ff6c76bff53d9b7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/upforce/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/51f75ceffcb99e282f7dddd49d505838/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/upforce/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/51f75ceffcb99e282f7dddd49d505838/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/upforce/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/0385e4f7c143f0d9f6a62d82aa9712ec/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/upforce/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/0385e4f7c143f0d9f6a62d82aa9712ec/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/upforce/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/a0e39ba385a3d203da647ccc52f98a7b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/upforce/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/a0e39ba385a3d203da647ccc52f98a7b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/upforce/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/5de6135d97293630d535046f095c1b43/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/upforce/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/5de6135d97293630d535046f095c1b43/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /Users/upforce/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/af0fb53642ff531f2db87af86e278774/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /Users/upforce/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/af0fb53642ff531f2db87af86e278774/AndroidManifest.xml:20:5-44
+MERGED from [com.facebook.fresco:fresco:1.10.0] /Users/upforce/.gradle/caches/transforms-1/files-1.1/fresco-1.10.0.aar/3f28bd20d0187b7766e84f4468a6dcba/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fresco:1.10.0] /Users/upforce/.gradle/caches/transforms-1/files-1.1/fresco-1.10.0.aar/3f28bd20d0187b7766e84f4468a6dcba/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.10.0] /Users/upforce/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-1.10.0.aar/0366e50f3bc9437f0e9cb2f35d8833e4/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.10.0] /Users/upforce/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-1.10.0.aar/0366e50f3bc9437f0e9cb2f35d8833e4/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:1.10.0] /Users/upforce/.gradle/caches/transforms-1/files-1.1/drawee-1.10.0.aar/e9ef17903081cf4c2410222874afae89/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:1.10.0] /Users/upforce/.gradle/caches/transforms-1/files-1.1/drawee-1.10.0.aar/e9ef17903081cf4c2410222874afae89/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:1.10.0] /Users/upforce/.gradle/caches/transforms-1/files-1.1/imagepipeline-1.10.0.aar/9cc5fa22de9ec31c01281ff6ce29062b/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:1.10.0] /Users/upforce/.gradle/caches/transforms-1/files-1.1/imagepipeline-1.10.0.aar/9cc5fa22de9ec31c01281ff6ce29062b/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:1.10.0] /Users/upforce/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-1.10.0.aar/d51588c45c05856d71abf49b22979e83/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:1.10.0] /Users/upforce/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-1.10.0.aar/d51588c45c05856d71abf49b22979e83/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.soloader:soloader:0.5.1] /Users/upforce/.gradle/caches/transforms-1/files-1.1/soloader-0.5.1.aar/815d9aa4444a3d0c3e72d75d62065439/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.soloader:soloader:0.5.1] /Users/upforce/.gradle/caches/transforms-1/files-1.1/soloader-0.5.1.aar/815d9aa4444a3d0c3e72d75d62065439/AndroidManifest.xml:7:5-9:41
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/upforce/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/3d7bb42f1cfee324be3bed7169c673f3/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/upforce/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/3d7bb42f1cfee324be3bed7169c673f3/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/upforce/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/462b3cb8bdc3ebce9c9b5ffe78ae6769/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/upforce/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/462b3cb8bdc3ebce9c9b5ffe78ae6769/AndroidManifest.xml:20:5-44
+MERGED from [com.facebook.fresco:fbcore:1.10.0] /Users/upforce/.gradle/caches/transforms-1/files-1.1/fbcore-1.10.0.aar/8c602d370087c0100d82ab01ca395a73/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:1.10.0] /Users/upforce/.gradle/caches/transforms-1/files-1.1/fbcore-1.10.0.aar/8c602d370087c0100d82ab01ca395a73/AndroidManifest.xml:5:5-7:41
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/upforce/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/c8bbe9450cbf032fdbbb0f8b811f14e2/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/upforce/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/c8bbe9450cbf032fdbbb0f8b811f14e2/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /Users/upforce/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/83e2042dbb17c6d56c4dfe77d3fe9280/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /Users/upforce/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/83e2042dbb17c6d56c4dfe77d3fe9280/AndroidManifest.xml:20:5-44
+INJECTED from /Users/upforce/Workspace/bizintro/android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/upforce/Workspace/bizintro/android/app/src/main/AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from /Users/upforce4/Workspace/Projects/bizintro/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/upforce4/Workspace/Projects/bizintro/android/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/upforce4/Workspace/Projects/bizintro/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/upforce/Workspace/bizintro/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/upforce/Workspace/bizintro/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/upforce/Workspace/bizintro/android/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/upforce4/Workspace/Projects/bizintro/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/upforce4/Workspace/Projects/bizintro/android/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/upforce4/Workspace/Projects/bizintro/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/upforce/Workspace/bizintro/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/upforce/Workspace/bizintro/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/upforce/Workspace/bizintro/android/app/src/main/AndroidManifest.xml
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-IMPLIED from /Users/upforce4/Workspace/Projects/bizintro/android/app/src/main/AndroidManifest.xml:1:1-26:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4
+IMPLIED from /Users/upforce/Workspace/bizintro/android/app/src/main/AndroidManifest.xml:1:1-26:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4
 uses-permission#android.permission.READ_PHONE_STATE
-IMPLIED from /Users/upforce4/Workspace/Projects/bizintro/android/app/src/main/AndroidManifest.xml:1:1-26:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4
+IMPLIED from /Users/upforce/Workspace/bizintro/android/app/src/main/AndroidManifest.xml:1:1-26:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-IMPLIED from /Users/upforce4/Workspace/Projects/bizintro/android/app/src/main/AndroidManifest.xml:1:1-26:12 reason: org.webkit.android_jsc requested WRITE_EXTERNAL_STORAGE
+IMPLIED from /Users/upforce/Workspace/bizintro/android/app/src/main/AndroidManifest.xml:1:1-26:12 reason: org.webkit.android_jsc requested WRITE_EXTERNAL_STORAGE

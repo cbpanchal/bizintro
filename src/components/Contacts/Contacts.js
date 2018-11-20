@@ -1,14 +1,18 @@
 //import liraries
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import { List, ListItem, Thumbnail } from "native-base";
 
 // create a component
 class Contacts extends Component {
     render() {
+        const { contacts } = this.props;
         return (
-            <View style={styles.container}>
-                <Text>Contacts</Text>
-            </View>
+            <List>
+                <ListItem avatar>
+                    <Thumbnail source={{ uri: `${contacts.uri}` }} />
+                </ListItem>
+            </List>
         );
     }
 }

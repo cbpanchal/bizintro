@@ -1,10 +1,20 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/upforce4/Workspace/Projects/bizintro/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hy/values-hy.xml",
+            "outputFile": "/Users/upforce/Workspace/bizintro/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hy/values-hy.xml",
             "map": [
                 {
-                    "source": "/Users/upforce4/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/ed3215e883661c3ec1c712857462935a/res/values-hy/values-hy.xml",
+                    "source": "/Users/upforce/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/4ea147bd089bfe60a47a74139d3cb13f/res/values-hy/values-hy.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,208,309,419,508,614,729,811,892,977,1084,1191,1290,1400,1507,1607,1764,1863",
+                        "endColumns": "102,100,109,88,105,114,81,80,84,106,106,98,109,106,99,156,98,81",
+                        "endOffsets": "203,304,414,503,609,724,806,887,972,1079,1186,1285,1395,1502,1602,1759,1858,1940"
+                    }
+                },
+                {
+                    "source": "/Users/upforce/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/af0fb53642ff531f2db87af86e278774/res/values-hy/values-hy.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -18,16 +28,6 @@
                         "startOffsets": "1945",
                         "endColumns": "100",
                         "endOffsets": "2041"
-                    }
-                },
-                {
-                    "source": "/Users/upforce4/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/9a1ab2c4ec674f3f4a159bd79eccf24b/res/values-hy/values-hy.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,208,309,419,508,614,729,811,892,977,1084,1191,1290,1400,1507,1607,1764,1863",
-                        "endColumns": "102,100,109,88,105,114,81,80,84,106,106,98,109,106,99,156,98,81",
-                        "endOffsets": "203,304,414,503,609,724,806,887,972,1079,1186,1285,1395,1502,1602,1759,1858,1940"
                     }
                 }
             ]

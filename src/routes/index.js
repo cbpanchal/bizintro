@@ -1,17 +1,15 @@
 import React from "react";
 import { Dimensions } from "react-native";
-import { createSwitchNavigator, createDrawerNavigator, createBottomTabNavigator } from "react-navigation";
-import DrawerNavigation from "./drawerNav";
-import SidebarContainer from "../containers/SidebarContainer/SidebarContainer";
-import AuthContainer from "../containers/AuthContainer/AuthContainer";
+import { createBottomTabNavigator } from "react-navigation";
+import { Icon } from "native-base";
 import HomeContainer from "../containers/HomeContainer/HomeContainer";
 import ProfileContainer from "../containers/ProfileContainer/ProfileContainer";
 import SearchContainer from "../containers/SearchContainer/SearchContainer";
 
-const DefaultDrawerNavigator = createDrawerNavigator(
+const RootStack = createBottomTabNavigator(
     {
         Home: {
-            screen: HomeContainer
+          screen: HomeContainer
         },
         Search: {
             screen: SearchContainer
@@ -19,71 +17,33 @@ const DefaultDrawerNavigator = createDrawerNavigator(
         Profile: {
             screen: ProfileContainer
         }
-    },
-    {
-        headerMode: 'screen',
-        contentComponent: (props) => <SidebarContainer {...props}/>,
-        drawerBackgroundColor: "rgb(114, 111, 172)",
-        contentOptions: {
-            activeLabelStyle:{
-                color:"#fff",
-            },
-            activeBackgroundColor: "rgba(114, 111, 172, 0)",
-            itemsContainerStyle:{
-                paddingHorizontal: 10,
-                paddingVertical: 5,
-                alignItems: 'center',
-            },
-            labelStyle:{
-                fontSize: 30,
-                color: "rgb(174, 175, 223)",
-              //  fontFamily: 'Roboto-Light',
-                paddingVertical: 0,
-                fontWeight: "normal",
-                margin: 10
+      },
+      {
+        navigationOptions: ({ navigation }) => ({
+          tabBarIcon: ({ focused, horizontal, tintColor }) => {
+            const { routeName } = navigation.state;
+            console.log({routeName})
+            let iconName, iconType;
+            if (routeName === 'Home') {
+              iconName = `home`;
+              iconType = "MaterialIcons";
+            } else if (routeName === 'Search') {
+              iconName = `ios-search`;
+              iconType = "Ionicons"
+            } else if (routeName === 'Profile') {
+              iconName = `user`;
+              iconType = "SimpleLineIcons"
+            } else if (routeName === 'Settings') {
+              iconName = `ios-options`;
             }
-        }
-    },
-    
-)
-const DefaultTabsNavigator = createBottomTabNavigator({
-    Home: {
-        screen: DrawerNavigation
-    },
-    Search: {
-        screen: DrawerNavigation
-    },
-    Profile: {
-        screen: DrawerNavigationrr
-    }
-    },
-    {
-        defaultNavigationOptions: ({ navigation }) => ({
-            tabBarIcon: ({ focused, horizontal, tintColor }) => {
-              const { routeName } = navigation.state;
-              let iconName;
-              if (routeName === 'Home') {
-                iconName = `ios-information-circle${focused ? '' : '-outline'}`;
-              } else if (routeName === 'Settings') {
-                iconName = `ios-options${focused ? '' : '-outline'}`;
-              }
-              return <Ionicons name={iconName} size={horizontal ? 20 : 25} color={tintColor} />;
-            },
-          }),
-    })
-const RootStack = createSwitchNavigator(
-    {
-        LoginScreen: {
-            screen: AuthContainer
+            return <Icon type={iconType} name={iconName} size={horizontal ? 20 : 25} color="white"/>;
+          },
+        }),
+        tabBarOptions: {
+          activeTintColor: 'blue',
+          inactiveTintColor: 'gray',
         },
-        HomeScreen: {
-            screen: DefaultTabsNavigator
-        },
-    },
-    {
-      initialRouteName: 'LoginScreen',
-      headerMode: 'none',
-    }
+      }
 );
 
 

@@ -34,7 +34,4 @@ const drawerStyles = {
         }
     }
 }
-export default createDrawerNavigator({
-    drawerRoutes,
-    drawerStyles
-})
+export default createDrawerNavigator(drawerRoutes, drawerStyles)

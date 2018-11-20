@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/upforce4/Workspace/Projects/bizintro/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-am/values-am.xml",
+            "outputFile": "/Users/upforce/Workspace/bizintro/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-am/values-am.xml",
             "map": [
                 {
-                    "source": "/Users/upforce4/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/ed3215e883661c3ec1c712857462935a/res/values-am/values-am.xml",
+                    "source": "/Users/upforce/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/af0fb53642ff531f2db87af86e278774/res/values-am/values-am.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "/Users/upforce4/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/9a1ab2c4ec674f3f4a159bd79eccf24b/res/values-am/values-am.xml",
+                    "source": "/Users/upforce/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/4ea147bd089bfe60a47a74139d3cb13f/res/values-am/values-am.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
