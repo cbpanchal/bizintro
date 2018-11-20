@@ -58,9 +58,11 @@ const styles = StyleSheet.create({
         height: "100%",
         justifyContent:"flex-start",
         backgroundColor: 'rgba(0, 0, 0, 0.8)',
+        padding: 10,
     },
     textContainer: {
-        alignItems: 'center',
+        alignItems: 'flex-start',
+        paddingHorizontal: 20,
         marginVertical: 60
     },
     startTitle: {
@@ -72,11 +74,9 @@ const styles = StyleSheet.create({
     startText: {
         fontSize: 15,
         color: "#fff",
-        marginHorizontal: 35,
         paddingTop: 15
     },  
     formContainer: {
-        marginHorizontal: 10,
         marginTop: 30
     },
     itemContainer: {
