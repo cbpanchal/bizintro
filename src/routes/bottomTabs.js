@@ -1,25 +1,25 @@
 import React from "react";
 import { createBottomTabNavigator } from "react-navigation";
 import { Icon } from "native-base";
-import DrawerNavigation from "./drawerNav";
+import HomeContainer from "../containers/HomeContainer/HomeContainer";
+import ProfileContainer from "../containers/ProfileContainer/ProfileContainer";
+import SearchContainer from "../containers/SearchContainer/SearchContainer";
 
 const drawerRoutes = {
     Home: {
-      screen: DrawerNavigation
+      screen: HomeContainer
     },
     Search: {
-        screen: DrawerNavigation
+        screen: SearchContainer
     },
     Profile: {
-        screen: DrawerNavigation
+        screen: ProfileContainer
     }
 } 
 const drawerStyles = {
-  navigationOptions: ({ navigation }) => ({
+  defaultNavigationOptions: ({ navigation }) => ({
     tabBarIcon: ({ focused, horizontal, tintColor }) => {
-      const { routeName } = navigation.state;
-      console.log(navigation, "routeName");
-      
+      const { routeName } = navigation.state;  
       let iconName, iconType;
       if (routeName === 'Home') {
         iconName = `home`;

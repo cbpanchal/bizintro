@@ -8,4 +8,10 @@ stats.json
 .DS_Store
 npm-debug.log
 .idea
-android/app/build
+# Android/IntelliJ
+#
+build/
+.idea
+.gradle
+local.properties
+*.iml
