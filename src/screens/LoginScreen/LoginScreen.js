@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, KeyboardAvoidingView, ScrollView } from 'react-native';
+import { StyleSheet, KeyboardAvoidingView, ScrollView, StatusBar } from 'react-native';
 import { Container, Button, View, Text, Form, Item, Label, Input } from 'native-base';
 import BackgroundImage from "../../components/BackgroundImage/BackgroundImage";
 import Bubble from "./Bubble";
@@ -16,38 +16,36 @@ class LoginScreen extends Component {
     render() {
         return (
             <Container>
-                <KeyboardAvoidingView behavior="padding"  style={{flex: 1}}>
+                <StatusBar backgroundColor="rgba(0, 0, 0, 0.8)" barStyle="light-content" />
+                {/* <KeyboardAvoidingView behavior="height" style={{flex: 1}}> */}
                     <BackgroundImage source={require("../../assets/images/background/drawer-bg.jpg")}>
                         <ScrollView contentContainerStyle={styles.container}>
-                                <View style={styles.bubbleContainer}>
-                                    <Bubble />
-                                </View>
-                                <View style={styles.textContainer}>
-                                    <Text style={styles.startText}>Get Started!</Text>
-                                </View>
-                                <Form style={styles.formContainer}>
-                                    <Item floatingLabel style={styles.itemContainer}>
-                                        <Label style={styles.label}>Username</Label>
-                                        <Input style={styles.input} />
-                                    </Item>
-                                    <Item floatingLabel style={styles.itemContainer}>
-                                        <Label style={styles.label}>Password</Label>
-                                        <Input style={styles.input} />
-                                    </Item>
-                                    <Button full style={styles.buttonContainer} onPress={this.handleSubmit}>
-                                        <Text uppercase={false} style={styles.buttonText}>Sign In</Text>
-                                    </Button>
-                                    <Button full transparent>
-                                        <Text 
-                                        uppercase={false} 
-                                        style={styles.buttonText}>
-                                            Don't have account? Sign Up
-                                        </Text>
-                                    </Button>
-                                </Form>
+                            <View style={styles.textContainer}>
+                                <Text style={styles.startTitle}>bizintro</Text>
+                                <Text style={styles.startText}>The world's #1 introduction tool empowering more meaningful interactions</Text>
+                            </View>
+                            <Form style={styles.formContainer}>
+                                <Item regular style={styles.itemContainer}>
+                                    <Input 
+                                        style={[styles.input, styles.inputRadius]} 
+                                        placeholder="Email Address" 
+                                        placeholderTextColor="#3c5467"
+                                    />
+                                </Item>
+                                <Item regular style={styles.itemContainer}>
+                                    <Input 
+                                        style={[styles.input, styles.inputRadius]} 
+                                        placeholder="Password" 
+                                        placeholderTextColor="#3c5467"
+                                    />
+                                </Item>
+                                <Button full style={[styles.buttonContainer, styles.inputRadius]} onPress={this.handleSubmit}>
+                                    <Text uppercase={false} style={styles.buttonText}>SIGN IN</Text>
+                                </Button>
+                            </Form>
                         </ScrollView>
                     </BackgroundImage>
-                </KeyboardAvoidingView>
+                {/* </KeyboardAvoidingView> */}
             </Container>
         );
     }
@@ -56,45 +54,53 @@ class LoginScreen extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent:"center",
-        backgroundColor: 'rgba(80, 210, 194, 0.8)',
-    },
-    bubbleContainer: {
-        marginTop: 103,
+        width: "100%",
+        height: "100%",
+        justifyContent:"flex-start",
+        backgroundColor: 'rgba(0, 0, 0, 0.8)',
     },
     textContainer: {
-        marginVertical: 15,
         alignItems: 'center',
+        marginVertical: 60
+    },
+    startTitle: {
+        color: "#fff",
+        fontSize: 45,
+        fontFamily: 'Roboto-Regular',
+        fontWeight: "bold"
     },
     startText: {
+        fontSize: 15,
         color: "#fff",
-        fontSize: 30,
-        fontFamily: 'Roboto-Regular',
-    },
+        marginHorizontal: 35,
+        paddingTop: 15
+    },  
     formContainer: {
-        backgroundColor: 'rgba(80, 210, 194, 0.6)',
-    },
-    label: {
-        color: "#fff",
-        paddingLeft: 20,
-        fontSize: 25
+        marginHorizontal: 10,
+        marginTop: 30
     },
     itemContainer: {
         marginLeft: 0,
+        marginBottom: 10,
+        borderColor: "transparent"
     },
     input: {
-        color: "#fff",
-        height: 70,
+        color: "#3c5467",
+        height: 60,
         paddingLeft: 20,
+        backgroundColor: "#fff",
     },
     buttonContainer: {
-        backgroundColor: "#6562a4",
-        height: 50,
+        backgroundColor: "#96c3cf",
+        height: 60,
     },
     buttonText: {
         fontSize: 20,
         fontFamily: "Roboto-Regular",
-        color: "#fff"
+        color: "#3c5467"
+    },
+    inputRadius: {
+        borderRadius: 5,
     }
 });
 
