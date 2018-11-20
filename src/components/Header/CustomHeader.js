@@ -36,7 +36,7 @@ const CustomHeader = ({
 };
 const styles = StyleSheet.create({
     headerContainer:{
-        marginVertical: 20
+        marginBottom:10
     },
     leftContainer: {
         paddingLeft: 0
