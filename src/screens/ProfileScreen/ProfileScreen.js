@@ -1,8 +1,6 @@
-//import liraries
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-// create a component
 class ProfileScreen extends Component {
     render() {
         return (
@@ -13,7 +11,6 @@ class ProfileScreen extends Component {
     }
 }
 
-// define your styles
 const styles = StyleSheet.create({
     container: {
         flex: 1,
@@ -23,5 +20,4 @@ const styles = StyleSheet.create({
     },
 });
 
-//make this component available to the app
 export default ProfileScreen;

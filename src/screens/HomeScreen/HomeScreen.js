@@ -23,6 +23,7 @@ const styles = StyleSheet.create({
         alignContent: 'center',
         alignItems: 'center',
         justifyContent: 'center',
+        backgroundColor: '#2c3e50',
     },
     map: {
         ...StyleSheet.absoluteFillObject,

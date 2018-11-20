@@ -1,12 +1,12 @@
 import React from 'react';
-import { StyleSheet, View } from "react-native";
-import { Icon } from 'native-base'
+import { StyleSheet } from "react-native";
+import { Left, Icon } from 'native-base'
 
-const HeaderLeft = (props) => {
+const HeaderLeft = ({ openDrawer}) => {
     return (
-        <View style={styles.container}>
-           <Icon name="menu" color="#bcbcbe" iconStyle={styles.iconSize} onPress={() => props.openDrawer()}/>
-        </View>
+        <Left style={styles.container}>
+           <Icon name="menu" color="#bcbcbe" iconStyle={styles.iconSize} onPress={() => openDrawer()}/>
+        </Left>
     );
 };
 

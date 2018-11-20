@@ -1,183 +1,132 @@
 //import liraries
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, ScrollView, FlatList } from 'react-native';
-import { Header, 
-    Container, 
-    Content,
-    Left, 
-    Body, 
-    Title, 
-    List, 
-    ListItem,
-    Thumbnail 
-} from "native-base";
-import Contacts from '../../components/Contacts/Contacts';
-import CardContainer from '../../components/Cards/CardContainer';
+import { View, Text, StyleSheet } from 'react-native';
+import { Container, Content } from "native-base";
+import Header from "../../components/Header/CustomHeader";
+import UserSlider from '../../components/Contacts/Contacts';
+import CardScroll from "../../components/Card";
 
-const dataArray = [
+const contacts = [
     {
-        uri: "http://www.st-michaelsacademy.com/images/diogo.png"
+        uri: "https://assets.entrepreneur.com/images/misc/1485878297_Tai%20Lopez.png"
     },
     {
-        uri: "http://www.st-michaelsacademy.com/images/diogo.png"
+        uri: "https://digitalmarketer.id/wp-content/uploads/2017/02/31.jpg"
     },
     {
-        uri: "http://www.st-michaelsacademy.com/images/diogo.png"
+        uri: "https://banner2.kisspng.com/20180401/jeq/kisspng-tai-lopez-investor-business-adviser-entrepreneursh-entrepreneur-5ac112da1d0ea0.3948194615226027141191.jpg"
     },
     {
-        uri: "http://www.st-michaelsacademy.com/images/diogo.png"
+        uri: "http://www.tomferry.com/wp-content/uploads/2017/05/tom-oracle.png"
     },
     {
-        uri: "http://www.st-michaelsacademy.com/images/diogo.png"
+        uri: "https://assets.entrepreneur.com/images/misc/1494364563_Gary%20Vaynerchuk2.png"
     },
     {
-        uri: "http://www.st-michaelsacademy.com/images/diogo.png"
+        uri: "https://assets.entrepreneur.com/images/misc/1485880429_Grant%20Cardone_alt.png"
     },
     {
-        uri: "http://www.st-michaelsacademy.com/images/diogo.png"
+        uri: "https://assets.entrepreneur.com/images/misc/1485878297_Tai%20Lopez.png"
     },
     {
-        uri: "http://www.st-michaelsacademy.com/images/diogo.png"
+        uri: "https://digitalmarketer.id/wp-content/uploads/2017/02/31.jpg"
     },
     {
-        uri: "http://www.st-michaelsacademy.com/images/diogo.png"
+        uri: "https://banner2.kisspng.com/20180401/jeq/kisspng-tai-lopez-investor-business-adviser-entrepreneursh-entrepreneur-5ac112da1d0ea0.3948194615226027141191.jpg"
+    },
+    {
+        uri: "http://www.tomferry.com/wp-content/uploads/2017/05/tom-oracle.png"
+    },
+    {
+        uri: "https://assets.entrepreneur.com/images/misc/1494364563_Gary%20Vaynerchuk2.png"
+    },
+    {
+        uri: "https://assets.entrepreneur.com/images/misc/1485880429_Grant%20Cardone_alt.png"
     },
 ];
-
 const cardArray = [
     {
-        header: "header",
-        body: "Body text",
-        footer: "footer"
+        header: "Intro Request",
+        body: "From John Alberts",
+        footer: "Accept"
     },
     {
-        header: "header",
-        body: "Body text",
-        footer: "footer"
+        header: "Intro Request",
+        body: "Steven P. would like to meet Bonnie R.",
+        footer: "Approve"
     },
     {
-        header: "header",
-        body: "Body text",
-        footer: "footer"
+        header: "Intro Request",
+        body: "From John Alberts",
+        footer: "Accept"
     },
     {
-        header: "header",
-        body: "Body text",
-        footer: "footer"
+        header: "Intro Request",
+        body: "Steven P. would like to meet Bonnie R.",
+        footer: "Approve"
     },
     {
-        header: "header",
-        body: "Body text",
-        footer: "footer"
+        header: "Intro Request",
+        body: "From John Alberts",
+        footer: "Accept"
     },
     {
-        header: "header",
-        body: "Body text",
-        footer: "footer"
+        header: "Intro Request",
+        body: "Steven P. would like to meet Bonnie R.",
+        footer: "Approve"
+    },
+    {
+        header: "Intro Request",
+        body: "From John Alberts",
+        footer: "Accept"
+    },
+    {
+        header: "Intro Request",
+        body: "Steven P. would like to meet Bonnie R.",
+        footer: "Approve"
+    },
+    {
+        header: "Intro",
+        body: "From John Alberts",
+        footer: "Accept"
+    },
+    {
+        header: "Intro",
+        body: "Steven P. would like to meet Bonnie R.",
+        footer: "Approve"
     },
 
 ];
-
-// create a component
 class SearchScreen extends Component {
     constructor(props) {
         super(props);
     }
-
-    _keyExtractor = (item, index) => index.toString();
-
-    _renderItem = ({item}) => (
-        <Contacts contacts={item} />
-    )
-
-    _renderCard= ({item}) => (
-        <CardContainer cards={item} />
-    )
-    
     render() {
         return (
             <Container>
                 <Header 
-                    transparent 
-                    androidStatusBarColor="#fff" 
-                    iosBarStyle="dark-content"
-                >
-                    <Body style={styles.headerContainer}>
-                        <Title style={styles.headerTitle}>bizintro</Title>
-                    </Body>
-                </Header>
+                    transparent
+                    title="bizintro"
+                    showCenter
+                />
                 <Content>
                     <View style={styles.titleText}>
                         <Text style={styles.recentContactText}>Recent Contacts</Text>
                     </View>
-                    <ScrollView
-                        contentContainerStyle={styles.contactsScrollView}
-                    >
-                        <FlatList
-                           style={{flex: 1}}
-                            horizontal={true}
-                            data={dataArray}
-                            extraData={dataArray}
-                            keyExtractor={this._keyExtractor}
-                            renderItem={this._renderItem}
-                            showsHorizontalScrollIndicator={false}
-                        />
-                    </ScrollView>
-                    <ScrollView
-                        contentContainerStyle={styles.cardScrollView}
-                    >
-                        <FlatList
-                           style={{flex: 1}}
-                            horizontal={true}
-                            data={cardArray}
-                            extraData={cardArray}
-                            keyExtractor={this._keyExtractor}
-                            renderItem={this._renderCard}
-                            showsHorizontalScrollIndicator={false}
-                        />
-                    </ScrollView>
+                    <UserSlider items={contacts} />
+                    <CardScroll items={cardArray} />
                 </Content>
             </Container>
         );
     }
 }
 
-// define your styles
+
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#fff',
-    },
-    headerContainer: {
-        justifyContent: "center", 
-        alignItems: "center"
-    },
-    headerTitle: {
-        color: "#425563",
-        fontWeight: "bold",
-        fontSize: 30
-    },
     titleText: {
         flex: 1,
         textAlign: "left",
-        paddingLeft: 24
-    },
-    contactsScrollView: {
-        flexWrap: "wrap",
-        flexDirection: "row",
-        justifyContent: "center",
-        paddingTop: 10,
-        paddingRight: 7
-    },
-    cardScrollView: {
-        flexWrap: "wrap",
-        flexDirection: "row",
-        justifyContent: "center",
-        paddingTop: 15,
-        paddingLeft: 7,
-        paddingRight: 7
+        paddingLeft: 18
     },
     recentContactText: {
         color: "#cbc9d5",
@@ -185,5 +134,4 @@ const styles = StyleSheet.create({
     }
 });
 
-//make this component available to the app
 export default SearchScreen;

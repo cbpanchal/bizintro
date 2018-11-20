@@ -1,22 +1,24 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { StyleSheet } from "react-native";
+import { Body, Title, Subtitle } from 'native-base';
 
-const HeaderCenter = props => {
+const HeaderCenter = (title, showSubtitle, subTitle) => {
     return (
-        <View>
-            <Text></Text>
-        </View>
+        <Body style={styles.container}>
+            <Title style={styles.containerTitle}>{title}</Title>
+            {showSubtitle && <Subtitle>{subTitle}</Subtitle>}
+        </Body>
     );
 }
-
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#2c3e50',
+        justifyContent: "center", 
+        alignItems: "center"
     },
+    containerTitle:{
+        color: "#425563",
+        fontWeight: "bold",
+        fontSize: 30
+    }
 });
-
-
 export default HeaderCenter;

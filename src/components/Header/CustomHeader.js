@@ -1,37 +1,62 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
-import { Header } from "react-native-elements";
-import HeaderLeft from "./HeaderLeft";
-import HeaderRight from "./HeaderRight";
-import HeaderCenter from "./HeaderCenter";
-
-const CustomHeader = (props) => {
+import { StyleSheet } from "react-native";
+import { Header, Body, Title, Subtitle } from "native-base";
+const CustomHeader = ({ 
+    transparent, 
+    androidStatusBarColor, 
+    iosBarStyle, 
+    showLeft, 
+    showCenter, 
+    showRight, 
+    title, 
+    subTitle,
+    showSubtitle,
+    openDrawer,
+    ...props }) => {
     return (
-            <Header
-                statusBarProps={{ barStyle: 'light-content' }}
-                leftComponent={<HeaderLeft {...props}/>}
-                centerComponent={<HeaderCenter />}
-                rightComponent={<HeaderRight />}
-                innerContainerStyles={styles.innerContainer}
-                outerContainerStyles={styles.outerContainer}
-            />
+        <Header  
+            transparent={transparent}
+            androidStatusBarColor={androidStatusBarColor}
+            iosBarStyle={iosBarStyle}
+            style={styles.headerContainer}
+        >
+            {showLeft && 
+            (
+                <Left style={styles.leftContainer}>
+                    <Icon name="menu" color="#bcbcbe" iconStyle={styles.leftIconSize} onPress={() => openDrawer()}/>
+                </Left>
+            )}
+            {showCenter &&
+            (<Body style={styles.bodyContainer}>
+                <Title style={styles.bodyContainerTitle}>{title}</Title>
+                {showSubtitle && <Subtitle>{subTitle}</Subtitle>}
+            </Body>)}
+        </Header>
         );
 };
-
-
 const styles = StyleSheet.create({
-    innerContainer: {
-        alignContent: 'center',
-        alignItems: 'center',
-        justifyContent: 'space-between',
+    headerContainer:{
+        marginVertical: 20
     },
-    outerContainer: {
-        marginTop: 20,
-        padding: 0,
-        paddingHorizontal: 10,
-        borderBottomWidth: 0,
-        backgroundColor:"transparent"
+    leftContainer: {
+        paddingLeft: 0
+    },
+    leftIconSize: {
+        fontSize: 35
+    },
+    bodyContainer: {
+        justifyContent: "center", 
+        alignItems: "center"
+    },
+    bodyContainerTitle:{
+        color: "#425563",
+        fontWeight: "bold",
+        fontSize: 30
     }
 });
-
+CustomHeader.defaultProps = {
+    transparent: false,
+    androidStatusBarColor: "#fff",
+    iosBarStyle: "dark-content"
+}
 export default CustomHeader;
