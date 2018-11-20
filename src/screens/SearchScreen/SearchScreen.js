@@ -5,6 +5,7 @@ import { Container, Content } from "native-base";
 import Header from "../../components/Header/CustomHeader";
 import UserSlider from '../../components/Contacts/Contacts';
 import CardScroll from "../../components/Card";
+import MapView from 'react-native-maps';
 
 const contacts = [
     {
@@ -115,6 +116,17 @@ class SearchScreen extends Component {
                     </View>
                     <UserSlider items={contacts} />
                     <CardScroll items={cardArray} />
+                    <View style={styles.mapContainer}>
+                        <MapView
+                        style={styles.map}
+                        region={{
+                            latitude: 37.78825,
+                            longitude: -122.4324,
+                            latitudeDelta: 0.015,
+                            longitudeDelta: 0.0121,
+                        }}
+                        />
+                    </View>
                 </Content>
             </Container>
         );
@@ -131,7 +143,16 @@ const styles = StyleSheet.create({
     recentContactText: {
         color: "#cbc9d5",
         fontSize: 15
-    }
+    },
+    mapContainer: {
+        height: 400,
+        width: 400,
+        justifyContent: 'flex-end',
+        alignItems: 'center',
+    },
+    map: {
+        ...StyleSheet.absoluteFillObject,
+    },
 });
 
 export default SearchScreen;
