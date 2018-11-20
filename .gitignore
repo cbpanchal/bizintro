@@ -10,7 +10,6 @@ npm-debug.log
 .idea
 # Android/IntelliJ
 #
-build/
 .idea
 .gradle
 local.properties
