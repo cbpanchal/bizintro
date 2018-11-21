@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, Image, StyleSheet } from 'react-native';
 import { Marker } from 'react-native-maps';
 
 const MarkerItem = ({image, latlon, title, subtitle}) => {
@@ -43,4 +43,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default MarkerItems;
+export default MarkerItem;

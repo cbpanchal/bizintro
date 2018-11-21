@@ -28,7 +28,7 @@ const GoogleMap = ({items, ...props}) => {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        height: 350,
         width: '100%',
         justifyContent: 'flex-end',
         alignItems: 'center',
