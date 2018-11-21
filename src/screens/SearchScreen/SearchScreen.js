@@ -1,7 +1,6 @@
-//import liraries
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { Container, Content } from "native-base";
+import { Container, Content, Title } from "native-base";
 import Header from "../../components/Header/CustomHeader";
 import UserSlider from '../../components/Contacts/Contacts';
 import CardScroll from "../../components/Card";
@@ -157,6 +156,9 @@ class SearchScreen extends Component {
                     transparent
                     title="bizintro"
                     showCenter
+                    bodyComponent={
+                        <Title style={styles.bodyContainerTitle}>bizintro</Title>
+                    }
                 />
                 <Content>
                     <View style={styles.titleText}>
@@ -181,6 +183,11 @@ class SearchScreen extends Component {
 
 
 const styles = StyleSheet.create({
+    bodyContainerTitle:{
+        color: "#425563",
+        fontWeight: "bold",
+        fontSize: 30
+    },
     titleText: {
         flex: 1,
         textAlign: "left",
