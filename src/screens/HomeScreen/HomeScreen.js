@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, StyleSheet, View, Dimensions } from 'react-native';
+import { Text, StyleSheet, View, Dimensions, Image } from 'react-native';
 import { Container, Content, Icon } from "native-base";
 import { Agenda } from '../../components/Calender';
 import PlusIcon from "../../components/Fabs/Plus"
@@ -85,8 +85,8 @@ class HomeScreen extends Component {
                     showLeft
                     showRight
                     showCenter
-                    leftComponent={<Icon name="menu" color="#bcbcbe" iconStyle={styles.iconSize}/>}
-                    rightComponent={<Icon name="search" iconStyle={styles.iconSize} />}
+                    leftComponent={<Image source={require('../../../assets/menu.png')} style={{height: 80, width: 80}} />}
+                    rightComponent={<Image source={require('../../../assets/search.png')} style={{height: 80, width: 80}} />}
                     bodyComponent={<MonthPicker items={monthNames}/>}
                 />
                 <Content contentContainerStyle={styles.container} bounces={false}>

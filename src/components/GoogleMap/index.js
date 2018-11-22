@@ -3,18 +3,13 @@ import { View, StyleSheet } from 'react-native';
 import MapView from 'react-native-maps';
 import Marker from "./MarkerItem";
 
-const GoogleMap = ({items, ...props}) => {
+const GoogleMap = ({items, defaultRegion, ...props}) => {
     return (
         <View style={styles.container}>
             <MapView
                 style={styles.mapView}
                 zoomEnabled
-                region={{
-                    latitude: 37.78825,
-         longitude: -122.4324,
-         latitudeDelta: 0.015,
-         longitudeDelta: 0.0121,
-                }}
+                region={defaultRegion}
             >
             {
                 items.map((item, key) => {
