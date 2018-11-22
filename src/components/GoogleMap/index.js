@@ -10,10 +10,10 @@ const GoogleMap = ({items, ...props}) => {
                 style={styles.mapView}
                 zoomEnabled
                 region={{
-                    latitude: 41.881832,
-                    longitude: -87.623177,
-                    latitudeDelta: 2.0111,
-                    longitudeDelta: 0.0150,
+                    latitude: 37.78825,
+         longitude: -122.4324,
+         latitudeDelta: 0.015,
+         longitudeDelta: 0.0121,
                 }}
             >
             {
