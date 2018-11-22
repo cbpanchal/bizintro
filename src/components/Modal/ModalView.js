@@ -35,6 +35,7 @@ export default class ModalViewContainer extends Component {
           iosBarStyle="dark-content"
           showLeft
           showRight
+          styleContainer={{paddingBottom: 25}}
           leftComponent={
             <Button onPress={onPress}>
               <Icon 

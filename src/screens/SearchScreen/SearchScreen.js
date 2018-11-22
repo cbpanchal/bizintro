@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Image } from 'react-native';
 import { Container, Content, Title } from "native-base";
 import Header from "../../components/Header/CustomHeader";
 import UserSlider from '../../components/Contacts/Contacts';
 import CardScroll from "../../components/Card";
 import GoogleMap from '../../components/GoogleMap'
 import MapView from 'react-native-maps';
+import Button from '../../components/Button/Button';
 
 const contacts = [
     {
@@ -156,9 +157,10 @@ class SearchScreen extends Component {
                     transparent
                     title="bizintro"
                     showCenter
-                    bodyComponent={
-                        <Title style={styles.bodyContainerTitle}>bizintro</Title>
-                    }
+                    showLeft
+                    showRight
+                    styleContainer= {{marginVertical: 20}}
+                    bodyComponent={<Image source={require('../../../assets/logo.png')} style={{height: 40, width: 160, flex :1}}/>}
                 />
                 <Content>
                     <View style={styles.titleText}>
@@ -168,10 +170,10 @@ class SearchScreen extends Component {
                     <CardScroll items={cardArray} />
                     <GoogleMap 
                         defaultRegion={{
-                            latitude: 37.78825,
-                            longitude: -122.4324,
-                            latitudeDelta: 0.015,
-                            longitudeDelta: 0.0121,
+                            latitude: 41.881832,
+                            longitude: -87.623177,
+                            latitudeDelta: 2.0111,
+                            longitudeDelta: 0.0150
                         }}
                         items={markers}
                     />

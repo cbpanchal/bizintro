@@ -15,26 +15,27 @@ const CustomHeader = ({
     leftComponent,
     rightComponent,
     bodyComponent,
+    styleContainer,
     ...props }) => {
     return (
         <Header  
             transparent={transparent}
             androidStatusBarColor={androidStatusBarColor}
             iosBarStyle={iosBarStyle}
-            style={styles.headerContainer}
+            style={[styles.headerContainer, styleContainer]}
         >
             {showLeft && 
             (
-                <Left>
+                <Left style={{flex: 1, justifyContent: "flex-start"}}>
                     {leftComponent}
                 </Left>
             )}
             {showCenter &&
-            (<Body>
+            (<Body style={{flex: 1, justifyContent: "center"}}>
                 {bodyComponent}
             </Body>)}
             {showRight && (
-                <Right>
+                <Right style={{flex: 1, justifyContent: "flex-end"}}>
                     {rightComponent}
                 </Right>
             )}
@@ -55,6 +56,12 @@ const styles = StyleSheet.create({
         color: "#425563",
         fontWeight: "bold",
         fontSize: 30
+    },
+    headerContainer: {
+        flexDirection: "row",
+    },
+    flex: {
+        flex: 1
     }
 });
 CustomHeader.defaultProps = {

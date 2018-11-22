@@ -31,7 +31,8 @@ const styles = StyleSheet.create({
         paddingRight: 7
     },
     flatListContainer:{
-        flex: 1
+        flex: 1,
+        paddingBottom: 10
     }
 });
 

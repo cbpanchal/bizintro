@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, KeyboardAvoidingView, ScrollView, StatusBar } from 'react-native';
+import { StyleSheet, KeyboardAvoidingView, ScrollView, StatusBar, Image } from 'react-native';
 import { Container, Button, View, Text, Form, Item, Label, Input } from 'native-base';
 import BackgroundImage from "../../components/BackgroundImage/BackgroundImage";
 import Bubble from "./Bubble";
@@ -21,7 +21,7 @@ class LoginScreen extends Component {
                     <BackgroundImage source={require("../../assets/images/background/drawer-bg.jpg")}>
                         <ScrollView contentContainerStyle={styles.container}>
                             <View style={styles.textContainer}>
-                                <Text style={styles.startTitle}>bizintro</Text>
+                                <Image source={require('../../../assets/main-logo.png')} style={{height: 80, width: 250}}/>
                                 <Text style={styles.startText}>The world's #1 introduction tool empowering more meaningful interactions</Text>
                             </View>
                             <Form style={styles.formContainer}>
@@ -63,7 +63,8 @@ const styles = StyleSheet.create({
     textContainer: {
         alignItems: 'flex-start',
         paddingHorizontal: 20,
-        marginVertical: 60
+        marginVertical: 60,
+        flex: 4
     },
     startTitle: {
         color: "#fff",
@@ -77,7 +78,8 @@ const styles = StyleSheet.create({
         paddingTop: 15
     },  
     formContainer: {
-        marginTop: 30
+        marginTop: 30,
+        flex: 6
     },
     itemContainer: {
         marginLeft: 0,

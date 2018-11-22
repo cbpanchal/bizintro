@@ -1,19 +1,23 @@
 import React, { Component } from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Image } from 'react-native';
 import { Text, Card, CardItem, Body, Icon, View } from "native-base";
 
 export default class CalendarCard extends Component {
   render() {
+    const { styleContainer, eventName, location, color, style, isLocationEvent } = this.props;
     return (
-      <Card style={styles.cardContainer}>
-        <CardItem style={styles.cardItemContainer}>
+      <Card style={[styles.cardContainer, styleContainer, {borderStartColor: color}]}>
+        <CardItem style={[styles.cardItemContainer, style]}>
           <Body>
             <Text style={styles.cardTitle}>
-              Lunch Break
+             {eventName}
             </Text>
             <View style={styles.cardLocationContainer}>
+              {isLocationEvent && 
               <Icon style={styles.locationIcon} type="MaterialIcons" name="location-on"/>
-              <Text style={styles.locationText}>Vegano Cafe</Text>
+              // <Image source={require('../../../assets/location.png')} style={{height: 80, width: 80}} />
+              }
+              <Text style={styles.locationText}>{location}</Text>
             </View>
           </Body>
         </CardItem>
@@ -26,10 +30,12 @@ const styles = StyleSheet.create({
   cardContainer: {
     borderRadius: 10, 
     borderLeftWidth: 7, 
-    borderStartColor: "#96c3cf",
+    elevation: 0,
+    zIndex: 1000,
+    borderWidth: 0,
   },
   cardItemContainer: {
-    backgroundColor: "#fff"
+    backgroundColor: "#fff",
   },
   cardTitle: {
     color: "#3c5468"
