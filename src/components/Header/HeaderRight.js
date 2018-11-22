@@ -16,7 +16,6 @@ const HeaderRight = () => {
 };
 
 const styles = StyleSheet.create({
-
     plusContainer: {
         justifyContent: 'space-around',
         paddingRight:10

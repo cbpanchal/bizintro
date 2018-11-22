@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet } from "react-native";
-import { Header, Body, Title, Subtitle } from "native-base";
+import { Header, Body, Title, Subtitle, Left, Icon, Right } from "native-base";
 const CustomHeader = ({ 
     transparent, 
     androidStatusBarColor, 
@@ -12,6 +12,9 @@ const CustomHeader = ({
     subTitle,
     showSubtitle,
     openDrawer,
+    leftComponent,
+    rightComponent,
+    bodyComponent,
     ...props }) => {
     return (
         <Header  
@@ -22,31 +25,31 @@ const CustomHeader = ({
         >
             {showLeft && 
             (
-                <Left style={styles.leftContainer}>
-                    <Icon name="menu" color="#bcbcbe" iconStyle={styles.leftIconSize} onPress={() => openDrawer()}/>
+                <Left>
+                    {leftComponent}
                 </Left>
             )}
             {showCenter &&
-            (<Body style={styles.bodyContainer}>
-                <Title style={styles.bodyContainerTitle}>{title}</Title>
-                {showSubtitle && <Subtitle>{subTitle}</Subtitle>}
+            (<Body>
+                {bodyComponent}
             </Body>)}
+            {showRight && (
+                <Right>
+                    {rightComponent}
+                </Right>
+            )}
         </Header>
         );
 };
 const styles = StyleSheet.create({
-    headerContainer:{
-        marginBottom:10
-    },
-    leftContainer: {
-        paddingLeft: 0
-    },
     leftIconSize: {
         fontSize: 35
     },
     bodyContainer: {
+        flex: 1,
         justifyContent: "center", 
-        alignItems: "center"
+        alignItems: "center",
+        textAlign: "center"
     },
     bodyContainerTitle:{
         color: "#425563",

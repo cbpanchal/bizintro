@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
-import {Modal, Text, TouchableOpacity, View, Alert, StyleSheet} from 'react-native';
-import { Container, Content, Fab, Icon } from "native-base";
-
+import {Modal} from 'react-native';
 import ModalView from '../../components/Modal/ModalView';
+import { Text, StyleSheet } from 'react-native';
+import { Container, Content, Icon, Title , Fab, View} from "native-base";
+import PlusIcon from "../../components/Fabs/Plus"
+import Header from "../../components/Header/CustomHeader";
+import CalendarCard from '../../components/Calendar/CalendarCard';
 
 class HomeScreen extends Component {
     constructor(props) {
@@ -20,26 +23,32 @@ class HomeScreen extends Component {
         const { navigation } = this.props;
         return (
             <Container>
+                <Header
+                    transparent
+                    showLeft
+                    showRight
+                    showCenter
+                    leftComponent={<Icon name="menu" color="#bcbcbe" iconStyle={styles.iconSize}/>}
+                    rightComponent={<Icon name="search" iconStyle={styles.iconSize} />}
+                    bodyComponent={<Title style={styles.bodyContainerTitle}>Body</Title>}
+                />
                 <Modal
                     animationType="slide"
                     transparent={false}
                     visible={this.state.modalVisible}
                     onRequestClose={() => {
-                        navigation.goBack()
+                        this.setModalVisible(!this.state.modalVisible)
                     }}
                 >
-                    <ModalViewContainer />
+                    <ModalView navigation= {navigation} onPress={() => {this.setModalVisible(!this.state.modalVisible)}}/>
                 </Modal>
+                <View style={styles.calendarCardContainer}>
+                    <CalendarCard />
+                </View>
                 <Content contentContainerStyle={styles.container} bounces={false}>
-                    <Fab
-                        active={true}
-                        direction="up"
-                        containerStyle={{ }}
-                        style={{ backgroundColor: '#3B95E5' }}
-                        position="bottomRight"
-                        onPress={() => { this.setModalVisible(!this.state.modalVisible)}}>
-                        <Icon type="MaterialIcons" name="add" />
-                    </Fab>
+                    <PlusIcon 
+                        onPress ={() => { this.setModalVisible(!this.state.modalVisible)}}
+                    />
                 </Content>
             </Container>
         );
@@ -48,16 +57,24 @@ class HomeScreen extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        ...StyleSheet.absoluteFillObject,
         flex: 1,
         alignContent: 'center',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: '#2c3e50',
+        backgroundColor: '#fff',
     },
-    map: {
-        ...StyleSheet.absoluteFillObject,
+    bodyContainerTitle:{
+        color: "#425563",
+        fontWeight: "bold",
     },
+    iconSize: {
+        fontSize: 35
+    },
+    calendarCardContainer: {
+        paddingTop: 50,
+        backgroundColor: '#fff',
+        paddingHorizontal: 25
+    }
 });
 
 export default HomeScreen;

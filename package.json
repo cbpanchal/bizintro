@@ -13,7 +13,9 @@
     "native-base": "^2.7.2",
     "react": "16.6.1",
     "react-native": "0.57.5",
-    "react-native-maps": "^0.22.1"
+    "react-native-calendars": "^1.21.0",
+    "react-native-maps": "^0.22.1",
+    "react-native-switch-pro": "^1.0.2-beta"
   },
   "devDependencies": {
     "babel-jest": "23.6.0",
