@@ -13,8 +13,7 @@ const CardItems = ({transparent, item, ...props}) => {
 
 const styles = StyleSheet.create({
     container: {
-        width: 180, 
-        marginLeft: 10
+        flex: 1,
     },
 });
 

@@ -4,11 +4,11 @@ import List from "../ListItem/List";
 import ListItem from "../ListItem/ListItem";
 import Thumbnail from "../ListItem/Thumbnail";
 
-const Items = ({item, thumbnailContainerStyle, ...props}) => {
+const Items = ({item, thumbnailContainerStyle, isLargeDevice, ...props}) => {
     return (
         <List>
             <ListItem {...props}>
-                <Thumbnail source={{ uri: `${item.item.uri}` }} style={thumbnailContainerStyle}/>
+                <Thumbnail source={{ uri: `${item.item.uri}` }} style={thumbnailContainerStyle} {...props}/>
             </ListItem>
         </List>
     );

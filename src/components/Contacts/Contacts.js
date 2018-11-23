@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet } from 'react-native';
-import ScrollView from "../ScrollView";
+import { StyleSheet, View } from 'react-native';
 import FlatList from "../FlatList";
 import Items from "./Items";
 
@@ -12,7 +11,7 @@ class Contacts extends Component {
     render() {
         const { items } = this.props;
         return (
-            <ScrollView contentContainerStyle={styles.scrollViewContainer} >
+            <View style={styles.scrollViewContainer} >
                 <FlatList 
                     style={styles.flatListContainer}
                     horizontal
@@ -22,7 +21,7 @@ class Contacts extends Component {
                     keyExtractor={(value , key) => key.toString()}
                     renderItem={(item) => <Items item={item} avatar thumbnailContainerStyle={styles.thumbnailContainer} />}
                 />
-            </ScrollView>
+            </View>
         );
     }
 }
@@ -38,14 +37,14 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "center",
         paddingTop: 15,
-        paddingRight: 7
+        flex: 0.3
     },
     flatListContainer:{
         flex: 1
     },
     thumbnailContainer:{
         backgroundColor: "lightgrey", 
-        resizeMode: "cover"
+        resizeMode: "cover",
     }
 });
 
