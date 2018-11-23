@@ -60,7 +60,7 @@ class HomeScreen extends Component {
                     showLeft
                     showRight
                     showCenter
-                    leftComponent={<Button styleContainer={styles.buttonContainer}><Image source={require('../../../assets/menu.png')} style={{height: 80, width: 80, backgroundColor: 'blue'}} /></Button>}
+                    leftComponent={<Button styleContainer={styles.buttonContainer}><Image source={require('../../../assets/menu.png')} style={{height: 80, width: 80}} /></Button>}
                     rightComponent={<Button><Image source={require('../../../assets/search.png')} style={{height: 80, width: 80}} /></Button>}
                     bodyComponent={
                         <View style={styles.headerBodyContainer}>
@@ -105,7 +105,6 @@ const styles = StyleSheet.create({
         fontWeight: "bold",
     },
     buttonContainer: {
-        backgroundColor: "red",
         flex: 1,
         flexDirection: 'row',
         alignItems: 'center',
