@@ -1,6 +1,7 @@
 import {parseDate} from '../interface';
 
 export default function shouldComponentUpdate(nextProps, nextState) {
+  console.log(nextProps , "updateer")
   let shouldUpdate = (nextProps.selected || []).reduce((prev, next, i) => {
     const currentSelected = (this.props.selected || [])[i];
     if (!currentSelected || !next || parseDate(currentSelected).getTime() !== parseDate(next).getTime()) {
@@ -44,6 +45,12 @@ export default function shouldComponentUpdate(nextProps, nextState) {
     shouldUpdate = {
       update: true,
       field: 'current'
+    };
+  }
+  if(nextProps.showAllDays !== this.props.showAllDays) {
+    shouldUpdate = {
+      update: true,
+      field: 'showAllDays'
     };
   }
   //console.log(shouldUpdate.field, shouldUpdate.update);

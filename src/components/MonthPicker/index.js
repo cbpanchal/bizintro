@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
         justifyContent: "center"
     },
     buttonStyle: {
-         alignItems: 'center',
+        alignItems: 'center',
         flexDirection:'row', 
         flexWrap:'wrap',
     },

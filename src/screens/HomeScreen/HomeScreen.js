@@ -5,12 +5,11 @@ import { Text, StyleSheet, Dimensions, Image } from 'react-native';
 import { Container, Content, Icon, Title , Fab, View} from "native-base";
 import PlusIcon from "../../components/Fabs/Plus"
 import Header from "../../components/Header/CustomHeader";
-import CalendarCard from '../../components/Calendar/CalendarCard';
-import { Agenda } from '../../components/Calender';
 import MonthPicker from "../../components/MonthPicker";
 import { monthNames } from "../../variables";
-import Events from "../../components/Events";
+import Calender from "../../components/Calender"
 import Button from '../../components/Button/Button';
+import ReservationsList from "../../components/Events";
 
 let { width } = Dimensions.get('window')
 const events = [
@@ -31,62 +30,27 @@ const events = [
 class HomeScreen extends Component {
     constructor(props) {
         super(props);
+        const windowSize = Dimensions.get('window');
+        this.viewHeight = windowSize.height;
+        this.viewWidth = windowSize.width;
         this.state = {
           items: {},
+          showAllDays: false,
           modalVisible: false,
         };
+        this.handleMonthChange = this.handleMonthChange.bind(this);
     }
-
-    setModalVisible(visible) {
-        this.setState({modalVisible: visible});
-    }
-
-    loadItems(day) {
-        setTimeout(() => {
-          for (let i = -15; i < 85; i++) {
-            const time = day.timestamp + i * 24 * 60 * 60 * 1000;
-            const strTime = this.timeToString(time);
-            if (!this.state.items[strTime]) {
-              this.state.items[strTime] = [];
-              const numItems = Math.floor(Math.random() * 5);
-              for (let j = 0; j < numItems; j++) {
-                this.state.items[strTime].push({
-                  name: 'Item for ' + strTime,
-                  height: Math.max(50, Math.floor(Math.random() * 150))
-                });
-              }
+    handleMonthChange(){
+        this.setState((prevState) => {
+            return {
+                ...prevState,
+                showAllDays: !prevState.showAllDays
             }
-          }
-          console.log(this.state.items);
-          const newItems = {};
-          Object.keys(this.state.items).forEach(key => {newItems[key] = this.state.items[key];});
-          this.setState({
-            items: newItems
-          });
-        }, 1000);
-        // console.log(`Load Items for ${day.year}-${day.month}`);
+        });
     }
-    renderItem(item) {
-        return (
-          <View style={[styles.item, {height: item.height}]}><Text>{item.name}</Text></View>
-        );
+    setModalVisible(visible) {
+        this.setState({ modalVisible: visible });
     }
-    
-    renderEmptyDate() {
-        return (
-            <View style={styles.emptyDate}><Text>This is empty date!</Text></View>
-        );
-    }
-    
-    rowHasChanged(r1, r2) {
-        return r1.name !== r2.name;
-    }
-    
-    timeToString(time) {
-        const date = new Date(time);
-        return date.toISOString().split('T')[0];
-    }
-
     render() {
         const { navigation } = this.props;
         return (
@@ -96,9 +60,16 @@ class HomeScreen extends Component {
                     showLeft
                     showRight
                     showCenter
-                    leftComponent={<Button><Image source={require('../../../assets/menu.png')} style={{height: 80, width: 80}} /></Button>}
+                    leftComponent={<Button styleContainer={styles.buttonContainer}><Image source={require('../../../assets/menu.png')} style={{height: 80, width: 80, backgroundColor: 'blue'}} /></Button>}
                     rightComponent={<Button><Image source={require('../../../assets/search.png')} style={{height: 80, width: 80}} /></Button>}
-                    bodyComponent={<MonthPicker items={monthNames}/>}
+                    bodyComponent={
+                        <View style={styles.headerBodyContainer}>
+                            <Button styleContainer ={styles.buttonStyle} onPress={this.handleMonthChange}>
+                                <Text style={styles.textIconColor}>JUNE</Text>
+                                <Icon style={styles.textIconColor} type="MaterialCommunityIcons" name={this.state.showAllDays ? `menu-up`: `menu-down`}/>
+                            </Button>
+                        </View>
+                    }
                 />
                 <Modal
                     animationType="slide"
@@ -110,21 +81,10 @@ class HomeScreen extends Component {
                 >
                     <ModalView navigation= {navigation} onPress={() => {this.setModalVisible(!this.state.modalVisible)}}/>
                 </Modal>
-                {/* <View style={styles.calendarCardContainer}>
-                    <CalendarCard />
-                </View> */}
                 <Content contentContainerStyle={styles.container} bounces={false}>
-                    <Agenda
-                        // items={events}
-                        selected={'2018-11-17'}
-                        renderItem={this.renderItem.bind(this)}
-                        renderEmptyDate={this.renderEmptyDate.bind(this)}
-                        rowHasChanged={this.rowHasChanged.bind(this)}
-                        hideKnob={true}
-                    />
-                    <PlusIcon 
-                        onPress ={() => { this.setModalVisible(!this.state.modalVisible)}}
-                    />
+                    <Calender firstDay={1} items={events} showAllDays={this.state.showAllDays}/>
+                    <ReservationsList  items={this.props.items} width={this.viewWidth} />
+                    <PlusIcon onPress ={() => { this.setModalVisible(!this.state.modalVisible)}} />
                 </Content>
             </Container>
         );
@@ -138,10 +98,33 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: '#fff',
+        paddingHorizontal: 0
     },
     bodyContainerTitle:{
         color: "#425563",
         fontWeight: "bold",
+    },
+    buttonContainer: {
+        backgroundColor: "red",
+        flex: 1,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    headerBodyContainer: {
+        width: "100%",
+        alignItems: 'center',
+        flexDirection:'row', 
+        flexWrap:'wrap',
+        justifyContent: "center"
+    },
+    buttonStyle: {
+        alignItems: 'center',
+        flexDirection:'row', 
+        flexWrap:'wrap',
+    },
+    textIconColor: {
+        color: "#2e2e39"
     },
     iconSize: {
         fontSize: 35
