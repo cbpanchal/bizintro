@@ -1,12 +1,11 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
-import ScrollView from "../ScrollView";
+import { StyleSheet, View } from 'react-native';
 import FlatList from "../FlatList";
 import Items from "./CardItems";
 
-const CardScroll = ({ items }) => {
+const CardScroll = ({ items, }) => {
     return (
-        <ScrollView contentContainerStyle={styles.scrollViewContainer} >
+        <View style={styles.scrollViewContainer}>
             <FlatList 
                 style={styles.flatListContainer}
                 horizontal
@@ -16,23 +15,21 @@ const CardScroll = ({ items }) => {
                 keyExtractor={(value , key) => key.toString()}
                 renderItem={(item) => <Items item={item.item} transparent />}
             />
-        </ScrollView>
+        </View>
     );
 };
 
 
 const styles = StyleSheet.create({
     scrollViewContainer: {
-        flexWrap: "wrap",
+        flexWrap: "nowrap",
         flexDirection: "row",
         justifyContent: "center",
-        paddingTop: 15,
-        paddingLeft: 7,
-        paddingRight: 7
+        paddingVertical: 5,
+        flex: 0.7,
     },
     flatListContainer:{
         flex: 1,
-        paddingBottom: 10
     }
 });
 

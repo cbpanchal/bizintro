@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { View, Text, StyleSheet, Image, Dimensions } from 'react-native';
 import { Container, Content, Title } from "native-base";
 import Header from "../../components/Header/CustomHeader";
 import UserSlider from '../../components/Contacts/Contacts';
@@ -146,11 +146,19 @@ const markers = [
       image: 'https://assets.entrepreneur.com/images/misc/1494364563_Gary%20Vaynerchuk2.png'
     },
   ];
+
+const { height } = Dimensions.get('window');
+const mainHeight = height - 50; 
+let isLargeDevice = (height > 700) ? true : false;
+let flexStyle = isLargeDevice ? {flex: 0.8} : {flex: 0.6}
+let mapHeight = mainHeight * flexStyle.flex;
+
 class SearchScreen extends Component {
     constructor(props) {
         super(props);
     }
     render() {
+        console.log({mainHeight}, {height}, mainHeight * flexStyle.flex)
         return (
             <Container>
                 <Header 
@@ -159,25 +167,30 @@ class SearchScreen extends Component {
                     showCenter
                     showLeft
                     showRight
-                    styleContainer= {{marginVertical: 20}}
+                    styleContainer= {{marginVertical: 10}}
                     bodyComponent={<Image source={require('../../../assets/logo.png')} style={{height: 40, width: 160, flex :1}}/>}
                 />
-                <Content>
-                    <View style={styles.titleText}>
-                        <Text style={styles.recentContactText}>Recent Contacts</Text>
+                <View style={{height: mainHeight}}>
+                    <View style={{flex: 0.4}}>
+                        <View style={styles.titleText}>
+                            <Text style={styles.recentContactText}>Recent Contacts</Text>
+                            <UserSlider items={contacts} />
+                            <CardScroll items={cardArray} />
+                        </View>
                     </View>
-                    <UserSlider items={contacts} />
-                    <CardScroll items={cardArray} />
-                    <GoogleMap 
-                        defaultRegion={{
-                            latitude: 41.881832,
-                            longitude: -87.623177,
-                            latitudeDelta: 2.0111,
-                            longitudeDelta: 0.0150
-                        }}
-                        items={markers}
-                    />
-                </Content>
+                    <View style={flexStyle}>
+                        <GoogleMap 
+                            defaultRegion={{
+                                latitude: 41.881832,
+                                longitude: -87.623177,
+                                latitudeDelta: 2.0111,
+                                longitudeDelta: 0.0150
+                            }}
+                            items={markers}
+                            mapHeight={mapHeight}
+                        />
+                    </View>
+                </View>
             </Container>
         );
     }
@@ -193,11 +206,11 @@ const styles = StyleSheet.create({
     titleText: {
         flex: 1,
         textAlign: "left",
-        paddingLeft: 18
     },
     recentContactText: {
         color: "#cbc9d5",
-        fontSize: 15
+        fontSize: 15,
+        paddingLeft: 18
     },
     mapContainer: {
         height: 400,

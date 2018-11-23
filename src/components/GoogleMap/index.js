@@ -3,9 +3,9 @@ import { View, StyleSheet } from 'react-native';
 import MapView from 'react-native-maps';
 import Marker from "./MarkerItem";
 
-const GoogleMap = ({items, defaultRegion, ...props}) => {
+const GoogleMap = ({items, defaultRegion, mapHeight, ...props}) => {
     return (
-        <View style={styles.container}>
+        <View style={[styles.container, {height: mapHeight}]}>
             <MapView
                 style={styles.mapView}
                 zoomEnabled
@@ -23,7 +23,6 @@ const GoogleMap = ({items, defaultRegion, ...props}) => {
 
 const styles = StyleSheet.create({
     container: {
-        height: 350,
         width: '100%',
         justifyContent: 'flex-end',
         alignItems: 'center',
