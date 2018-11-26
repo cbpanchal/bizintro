@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, FlatList } from 'react-native';
 import Items from './Items';
 import { ScrollView } from 'react-native-gesture-handler';
 
-const CALENDER_HEIGHT = 2400;
+const CALENDAR_HEIGHT = 2400;
 
 class Events extends Component {
   constructor(props) {
@@ -17,7 +17,7 @@ class Events extends Component {
         items,
         initDate
     } = this.props;
-    const offset = CALENDER_HEIGHT / 24
+    const offset = CALENDAR_HEIGHT / 24
     return (
         <View style={[styles.container, { width }]}>
           <ScrollView>

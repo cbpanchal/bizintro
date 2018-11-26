@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { View, Text, Dimensions, StyleSheet } from 'react-native';
 import moment from "moment";
 import dateutils from './utils';
-import  Calendar  from './calendar';
+import  Calendar  from './Calendar';
 
-class CalenderComponent extends Component {
+class Component extends React.Component {
   constructor(props) {
     super(props);
     const windowSize = Dimensions.get('window');
@@ -90,4 +90,4 @@ const styles = StyleSheet.create({
         color: "#cbc9d5"
     },
 });
-export default CalenderComponent;
+export default Component;

@@ -5,7 +5,7 @@ import { Text, StyleSheet, Dimensions, Image } from 'react-native';
 import { Container, Content, Icon, View} from "native-base";
 import PlusIcon from "../../components/Fabs/Plus"
 import Header from "../../components/Header/CustomHeader";
-import Calender from "../../components/Calender"
+import Calendar from "../../components/Calendar"
 import Button from '../../components/Button/Button';
 import ReservationsList from "../../components/Events";
 
@@ -91,7 +91,7 @@ class SearchScreen extends Component {
                     <ModalView navigation= {navigation} onPress={() => {this.setModalVisible(!this.state.modalVisible)}}/>
                 </Modal>
                 <Content contentContainerStyle={styles.container} bounces={false}>
-                    <Calender firstDay={1} items={events} showAllDays={this.state.showAllDays}/>
+                    <Calendar firstDay={1} items={events} showAllDays={this.state.showAllDays}/>
                     <ReservationsList  items={this.props.items} width={this.viewWidth} />
                     <PlusIcon onPress ={() => { this.setModalVisible(!this.state.modalVisible)}} />
                 </Content>
