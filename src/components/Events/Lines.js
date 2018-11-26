@@ -4,10 +4,10 @@ function range (from, to) {
     return Array.from(Array(to), (_, i) => from + i)
 }
 
-const CALENDER_HEIGHT = 2400;
+const CALENDAR_HEIGHT = 2400;
 
 const RenderLines = ({ format24h, width }) => {
-    const offset = CALENDER_HEIGHT / 24
+    const offset = CALENDAR_HEIGHT / 24
     return range(0, 25).map((item, i) => {
         let timeText
         if (i === 0) {

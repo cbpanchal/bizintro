@@ -1,5 +1,5 @@
-const get = require('lodash.get');
-const isEqual = require('lodash.isequal');
+import get from "lodash/get";
+import isEqual from "lodash/isEqual"
 
 function shouldUpdate(a, b, paths) {
   for (let i = 0; i < paths.length; i++) {
