@@ -57,7 +57,6 @@ class SearchScreen extends Component {
                     showLeft
                     showRight
                     showCenter
-                    styleContainer= {isLargeDevice ? {marginVertical: 10} : {marginVertical: 5}}
                     leftComponent={
                         <Button styleContainer={styles.leftButtonContainer}>
                             <View style={styles.leftImageContainer}>
