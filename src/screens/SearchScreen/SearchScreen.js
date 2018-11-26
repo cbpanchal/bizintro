@@ -167,7 +167,7 @@ class SearchScreen extends Component {
                     showCenter
                     showLeft
                     showRight
-                    styleContainer= {{marginVertical: 10}}
+                    styleContainer= {isLargeDevice ? {marginVertical: 10} : {marginVertical: 5}}
                     bodyComponent={<Image source={require('../../../assets/logo.png')} style={{height: 40, width: 160, flex :1}}/>}
                 />
                 <View style={{height: mainHeight}}>

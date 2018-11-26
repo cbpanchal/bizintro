@@ -3,8 +3,9 @@ import { StyleSheet, Dimensions } from 'react-native';
 import { View, CardItem, Text, Body, Icon } from 'native-base';
 import Button from "../Button/Button";
 
-const { height } = Dimensions.get("window");
+const { height, width } = Dimensions.get("window");
 let isLargeDevice = (height > 700) ? true : false;
+let isSmallDevice = (width < 400) ? true : false;
 
 const Component = ({ body, header }) => {
     return (
@@ -13,7 +14,7 @@ const Component = ({ body, header }) => {
                 <Text note style={[styles.containerText, styles.headerColor]}>
                     {header}
                 </Text>
-                <Text style={[styles.containerText, styles.bodyTextColor]} numberOfLines={!isLargeDevice ? 1 : 2}>
+                <Text style={[styles.containerText, styles.bodyTextColor]} numberOfLines={isSmallDevice ? 1 : 2}>
                     {body}
                 </Text>
                 <View style={styles.footerContainer}>

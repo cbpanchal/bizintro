@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, Dimensions, StyleSheet } from 'react-native';
 import moment from "moment";
 import dateutils from './utils';
-import  Calendar  from './Calendar';
+import  Calendar  from './calendar';
 
 class CalenderComponent extends Component {
   constructor(props) {
