@@ -3,7 +3,6 @@ import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { Icon } from "native-base";
 
 const SidebarFooter = (props) => {
-    console.log(props);
     return (
         <View style={styles.footerContainer}>
             <View style={styles.footerInnerContainer}>
