@@ -1,226 +1,173 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, Image, Dimensions } from 'react-native';
-import { Container, Content, Title } from "native-base";
+import { Modal } from 'react-native';
+import ModalView from '../../components/Modal/ModalView';
+import { Text, StyleSheet, Dimensions, Image } from 'react-native';
+import { Container, Content, Icon, View} from "native-base";
+import PlusIcon from "../../components/Fabs/Plus"
 import Header from "../../components/Header/CustomHeader";
-import UserSlider from '../../components/Contacts/Contacts';
-import CardScroll from "../../components/Card";
-import GoogleMap from '../../components/GoogleMap'
-import MapView from 'react-native-maps';
+import Calender from "../../components/Calender"
 import Button from '../../components/Button/Button';
+import ReservationsList from "../../components/Events";
 
-const contacts = [
-    {
-        uri: "https://assets.entrepreneur.com/images/misc/1485878297_Tai%20Lopez.png"
-    },
-    {
-        uri: "https://digitalmarketer.id/wp-content/uploads/2017/02/31.jpg"
-    },
-    {
-        uri: "https://banner2.kisspng.com/20180401/jeq/kisspng-tai-lopez-investor-business-adviser-entrepreneursh-entrepreneur-5ac112da1d0ea0.3948194615226027141191.jpg"
-    },
-    {
-        uri: "http://www.tomferry.com/wp-content/uploads/2017/05/tom-oracle.png"
-    },
-    {
-        uri: "https://assets.entrepreneur.com/images/misc/1494364563_Gary%20Vaynerchuk2.png"
-    },
-    {
-        uri: "https://assets.entrepreneur.com/images/misc/1485880429_Grant%20Cardone_alt.png"
-    },
-    {
-        uri: "https://assets.entrepreneur.com/images/misc/1485878297_Tai%20Lopez.png"
-    },
-    {
-        uri: "https://digitalmarketer.id/wp-content/uploads/2017/02/31.jpg"
-    },
-    {
-        uri: "https://banner2.kisspng.com/20180401/jeq/kisspng-tai-lopez-investor-business-adviser-entrepreneursh-entrepreneur-5ac112da1d0ea0.3948194615226027141191.jpg"
-    },
-    {
-        uri: "http://www.tomferry.com/wp-content/uploads/2017/05/tom-oracle.png"
-    },
-    {
-        uri: "https://assets.entrepreneur.com/images/misc/1494364563_Gary%20Vaynerchuk2.png"
-    },
-    {
-        uri: "https://assets.entrepreneur.com/images/misc/1485880429_Grant%20Cardone_alt.png"
-    },
-];
-const cardArray = [
-    {
-        header: "Intro Request",
-        body: "From John Alberts",
-        footer: "Accept"
-    },
-    {
-        header: "Intro Request",
-        body: "Steven P. would like to meet Bonnie R.",
-        footer: "Approve"
-    },
-    {
-        header: "Intro Request",
-        body: "From John Alberts",
-        footer: "Accept"
-    },
-    {
-        header: "Intro Request",
-        body: "Steven P. would like to meet Bonnie R.",
-        footer: "Approve"
-    },
-    {
-        header: "Intro Request",
-        body: "From John Alberts",
-        footer: "Accept"
-    },
-    {
-        header: "Intro Request",
-        body: "Steven P. would like to meet Bonnie R.",
-        footer: "Approve"
-    },
-    {
-        header: "Intro Request",
-        body: "From John Alberts",
-        footer: "Accept"
-    },
-    {
-        header: "Intro Request",
-        body: "Steven P. would like to meet Bonnie R.",
-        footer: "Approve"
-    },
-    {
-        header: "Intro",
-        body: "From John Alberts",
-        footer: "Accept"
-    },
-    {
-        header: "Intro",
-        body: "Steven P. would like to meet Bonnie R.",
-        footer: "Approve"
-    },
-
-];
-const markers = [
-    {
-      latlon: {
-        latitude: 41.881832,
-        longitude: -87.623177
-      },
-      title: 'Foo Place',
-      subtitle: '1234 Foo Drive',
-      image: 'https://assets.entrepreneur.com/images/misc/1485878297_Tai%20Lopez.png'
-    },
-    {
-      latlon: {
-        latitude: 41.434345,
-        longitude: -87.546576
-      },
-      title: 'Foo Place2',
-      subtitle: '1234 Foo Drive2',
-      image: 'https://digitalmarketer.id/wp-content/uploads/2017/02/31.jpg'
-    },
-    {
-      latlon: {
-        latitude: 41.212121,
-        longitude: -87.323232
-      },
-      title: 'Foo Place3',
-      subtitle: '1234 Foo Drive3',
-      image: 'https://banner2.kisspng.com/20180401/jeq/kisspng-tai-lopez-investor-business-adviser-entrepreneursh-entrepreneur-5ac112da1d0ea0.3948194615226027141191.jpg'
-    },
-    {
-      latlon: {
-        latitude: 41.012121,
-        longitude: -87.343434
-      },
-      title: 'Foo Place4',
-      subtitle: '1234 Foo Drive4',
-      image: 'http://www.tomferry.com/wp-content/uploads/2017/05/tom-oracle.png'
-    },
-    {
-      latlon: {
-        latitude: 41.989898,
-        longitude: -87.878787
-      },
-      title: 'Foo Place5',
-      subtitle: '1234 Foo Drive5',
-      image: 'https://assets.entrepreneur.com/images/misc/1494364563_Gary%20Vaynerchuk2.png'
-    },
-  ];
-
-const { height } = Dimensions.get('window');
-const mainHeight = height - 50; 
-let isLargeDevice = (height > 700) ? true : false;
-let flexStyle = isLargeDevice ? {flex: 0.8} : {flex: 0.6}
-let mapHeight = mainHeight * flexStyle.flex;
+const events = [
+    { start: '2017-09-07 00:30:00', end: '2017-09-07 01:30:00', title: 'Dr. Mariana Joseph', summary: '3412 Piedmont Rd NE, GA 3032' },
+    { start: '2017-09-07 01:30:00', end: '2017-09-07 02:20:00', title: 'Dr. Mariana Joseph', summary: '3412 Piedmont Rd NE, GA 3032' },
+    { start: '2017-09-07 04:10:00', end: '2017-09-07 04:40:00', title: 'Dr. Mariana Joseph', summary: '3412 Piedmont Rd NE, GA 3032' },
+    { start: '2017-09-07 01:05:00', end: '2017-09-07 01:45:00', title: 'Dr. Mariana Joseph', summary: '3412 Piedmont Rd NE, GA 3032' },
+    { start: '2017-09-07 14:30:00', end: '2017-09-07 16:30:00', title: 'Dr. Mariana Joseph', summary: '3412 Piedmont Rd NE, GA 3032' },
+    { start: '2017-09-08 01:20:00', end: '2017-09-08 02:20:00', title: 'Dr. Mariana Joseph', summary: '3412 Piedmont Rd NE, GA 3032' },
+    { start: '2017-09-08 04:10:00', end: '2017-09-08 04:40:00', title: 'Dr. Mariana Joseph', summary: '3412 Piedmont Rd NE, GA 3032' },
+    { start: '2017-09-08 00:45:00', end: '2017-09-08 01:45:00', title: 'Dr. Mariana Joseph', summary: '3412 Piedmont Rd NE, GA 3032' },
+    { start: '2017-09-08 11:30:00', end: '2017-09-08 12:30:00', title: 'Dr. Mariana Joseph', summary: '3412 Piedmont Rd NE, GA 3032' },
+    { start: '2017-09-09 01:30:00', end: '2017-09-09 02:00:00', title: 'Dr. Mariana Joseph', summary: '3412 Piedmont Rd NE, GA 3032' },
+    { start: '2017-09-09 03:10:00', end: '2017-09-09 03:40:00', title: 'Dr. Mariana Joseph', summary: '3412 Piedmont Rd NE, GA 3032' },
+    { start: '2017-09-09 00:10:00', end: '2017-09-09 01:45:00', title: 'Dr. Mariana Joseph', summary: '3412 Piedmont Rd NE, GA 3032' }
+]
 
 class SearchScreen extends Component {
     constructor(props) {
         super(props);
+        const windowSize = Dimensions.get('window');
+        this.viewHeight = windowSize.height;
+        this.viewWidth = windowSize.width;
+        this.state = {
+          items: {},
+          showAllDays: false,
+          modalVisible: false,
+        };
+        this.handleMonthChange = this.handleMonthChange.bind(this);
+    }
+    handleMonthChange(){
+        this.setState((prevState) => {
+            return {
+                ...prevState,
+                showAllDays: !prevState.showAllDays
+            }
+        });
+    }
+    setModalVisible(visible) {
+        this.setState({ modalVisible: visible });
     }
     render() {
-        console.log({mainHeight}, {height}, mainHeight * flexStyle.flex)
+        const { navigation } = this.props;
         return (
             <Container>
-                <Header 
+                <Header
                     transparent
-                    title="bizintro"
-                    showCenter
                     showLeft
                     showRight
-                    styleContainer= {{marginVertical: 10}}
-                    bodyComponent={<Image source={require('../../../assets/logo.png')} style={{height: 40, width: 160, flex :1}}/>}
-                />
-                <View style={{height: mainHeight}}>
-                    <View style={{flex: 0.4}}>
-                        <View style={styles.titleText}>
-                            <Text style={styles.recentContactText}>Recent Contacts</Text>
-                            <UserSlider items={contacts} />
-                            <CardScroll items={cardArray} />
+                    showCenter
+                    leftComponent={
+                        <Button styleContainer={styles.leftButtonContainer}>
+                            <View style={styles.leftImageContainer}>
+                                <Image source={require('../../../assets/menu.png')} style={styles.menuIconImage} />
+                            </View>
+                        </Button>
+                    }
+                    rightComponent={ 
+                        <Button styleContainer={styles.rightButtonContainer}>
+                            <View style={styles.rightImageContainer}>
+                                <Image source={require('../../../assets/search.png')} style={styles.menuIconImage} />
+                            </View>
+                        </Button>
+                    }
+                    bodyComponent={
+                        <View style={styles.headerBodyContainer}>
+                            <Button styleContainer ={styles.buttonStyle} onPress={this.handleMonthChange}>
+                                <Text style={styles.textIconColor}>JUNE</Text>
+                                <Icon style={styles.textIconColor} type="MaterialCommunityIcons" name={this.state.showAllDays ? `menu-up`: `menu-down`}/>
+                            </Button>
                         </View>
-                    </View>
-                    <View style={flexStyle}>
-                        <GoogleMap 
-                            defaultRegion={{
-                                latitude: 41.881832,
-                                longitude: -87.623177,
-                                latitudeDelta: 2.0111,
-                                longitudeDelta: 0.0150
-                            }}
-                            items={markers}
-                            mapHeight={mapHeight}
-                        />
-                    </View>
-                </View>
+                    }
+                />
+                <Modal
+                    animationType="slide"
+                    transparent={false}
+                    visible={this.state.modalVisible}
+                    onRequestClose={() => {
+                        this.setModalVisible(!this.state.modalVisible)
+                    }}
+                >
+                    <ModalView navigation= {navigation} onPress={() => {this.setModalVisible(!this.state.modalVisible)}}/>
+                </Modal>
+                <Content contentContainerStyle={styles.container} bounces={false}>
+                    <Calender firstDay={1} items={events} showAllDays={this.state.showAllDays}/>
+                    <ReservationsList  items={this.props.items} width={this.viewWidth} />
+                    <PlusIcon onPress ={() => { this.setModalVisible(!this.state.modalVisible)}} />
+                </Content>
             </Container>
         );
-    }
+    }  
 }
 
-
 const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        alignContent: 'center',
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: '#fff',
+        paddingHorizontal: 0
+    },
     bodyContainerTitle:{
         color: "#425563",
         fontWeight: "bold",
-        fontSize: 30
     },
-    titleText: {
-        flex: 1,
-        textAlign: "left",
-    },
-    recentContactText: {
-        color: "#cbc9d5",
-        fontSize: 15,
-        paddingLeft: 18
-    },
-    mapContainer: {
-        height: 400,
-        width: 400,
-        justifyContent: 'flex-end',
+    leftButtonContainer: {
+        width: 25,
+        height: 25,
+        flexDirection: 'row',
         alignItems: 'center',
+        justifyContent: 'center',
+        paddingHorizontal: 20
     },
-    map: {
-        ...StyleSheet.absoluteFillObject,
+    rightButtonContainer: {
+        width: 25,
+        height: 25,
+        alignItems: 'flex-end',
+        justifyContent: 'flex-end',
+        paddingHorizontal: 20
     },
+    leftImageContainer: {
+        alignSelf: 'center',
+        alignItems: "center",
+        width: 25,
+        height: 25
+    },
+    rightImageContainer: {
+        alignSelf: 'center',
+        alignItems: "center",
+        width: 25,
+        height: 25
+    },
+    menuIconImage: {
+        width: "100%",
+        height: "100%",
+        resizeMode: "contain"
+    },
+    headerBodyContainer: {
+        width: "100%",
+        alignItems: 'center',
+        flexDirection:'row', 
+        flexWrap:'wrap',
+        justifyContent: "center"
+    },
+    buttonStyle: {
+        alignItems: 'center',
+        flexDirection:'row', 
+        flexWrap:'wrap',
+    },
+    textIconColor: {
+        color: "#2e2e39"
+    },
+    iconSize: {
+        fontSize: 35
+    },
+    calendarCardContainer: {
+        paddingTop: 50,
+        backgroundColor: '#fff',
+        paddingHorizontal: 25
+    }
 });
 
 export default SearchScreen;

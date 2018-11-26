@@ -56,8 +56,6 @@ class Calendar extends Component {
     } else {
       currentMonth = XDate();
     }
-    console.log(currentMonth, "currentMonth");
-    
     this.state = {
       currentMonth,
       showAllDays: false
@@ -73,8 +71,6 @@ class Calendar extends Component {
   componentWillReceiveProps(nextProps) {  
     const current= parseDate(nextProps.current);
     if (current && current.toString('yyyy MM') !== this.state.currentMonth.toString('yyyy MM')) {
-      console.log(current, "currentdate");
-      
       this.setState({
         currentMonth: current.clone()
       });
@@ -102,8 +98,6 @@ class Calendar extends Component {
 
   _handleDayInteraction(date, interaction) {
     const day = parseDate(date);
-    console.log(day, "selected date");
-    
     const minDate = parseDate(this.props.minDate);
     const maxDate = parseDate(this.props.maxDate);
     if (!(minDate && !dateutils.isGTE(day, minDate)) && !(maxDate && !dateutils.isLTE(day, maxDate))) {
@@ -212,7 +206,6 @@ class Calendar extends Component {
   }
 
   render() {
-    console.log(this.state.currentMonth);
     const days = dateutils.page(this.state.currentMonth, this.props.firstDay, this.props.showAllDays); 
     const weeks = [];
     while (days.length) {

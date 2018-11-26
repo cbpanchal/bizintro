@@ -4,10 +4,11 @@ import HomeContainer from "../containers/HomeContainer/HomeContainer";
 import ProfileContainer from "../containers/ProfileContainer/ProfileContainer";
 import SearchContainer from "../containers/SearchContainer/SearchContainer";
 import SidebarContainer from "../containers/SidebarContainer/SidebarContainer";
+import BottomTabNavigation from "./bottomTabs";
 
 const drawerRoutes = {
     Home: { screen: HomeContainer },
-    Search: { screen: SearchContainer},
+    Search: { screen: BottomTabNavigation},
     Profile: { screen: ProfileContainer }
 }
 const drawerStyles = {
