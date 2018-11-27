@@ -156,17 +156,17 @@ class HomeScreen extends Component {
         super(props);
     }
     render() {
-        console.log({mainHeight}, {height}, mainHeight * flexStyle.flex)
         return (
             <Container>
                 <Header 
                     transparent
-                    title="bizintro"
                     showCenter
-                    showLeft
-                    showRight
-                    styleContainer= {isLargeDevice ? {marginVertical: 10} : {marginVertical: 5}}
-                    bodyComponent={<Image source={require('../../../assets/logo.png')} style={{height: 40, width: 160, flex :1}}/>}
+                    bodyContainer={styles.bodyContainer}
+                    bodyComponent={
+                        <View style={styles.logoContainer}>
+                            <Image source={require('../../../assets/logo.png')} style={styles.logoImage}/>
+                        </View>
+                    }
                 />
                 <View style={{height: mainHeight}}>
                     <View style={{flex: 0.4}}>
@@ -196,10 +196,20 @@ class HomeScreen extends Component {
 
 
 const styles = StyleSheet.create({
-    bodyContainerTitle:{
-        color: "#425563",
-        fontWeight: "bold",
-        fontSize: 30
+    logoContainer:{
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "center"
+    },
+    logoImage: {
+      height: 40,
+      width: 130,
+      resizeMode: "contain"
+    },
+    bodyContainer: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     titleText: {
         flex: 1,

@@ -16,6 +16,7 @@ const CustomHeader = ({
     rightComponent,
     bodyComponent,
     styleContainer,
+    bodyContainer,
     ...props }) => {
     return (
         <Header  
@@ -26,16 +27,16 @@ const CustomHeader = ({
         >
             {showLeft && 
             (
-                <Left style={{flex: 1, justifyContent: "flex-start"}}>
+                <Left style={styles.leftContainer}>
                     {leftComponent}
                 </Left>
             )}
             {showCenter &&
-            (<Body style={{flex: 1, justifyContent: "center"}}>
+            (<Body style={[styles.bodyContainer, bodyContainer]}>
                 {bodyComponent}
             </Body>)}
             {showRight && (
-                <Right style={{flex: 1, justifyContent: "flex-end"}}>
+                <Right style={styles.rightContainer}>
                     {rightComponent}
                 </Right>
             )}
@@ -46,11 +47,19 @@ const styles = StyleSheet.create({
     leftIconSize: {
         fontSize: 35
     },
+    leftContainer: {
+        flex: 1, 
+        justifyContent: "flex-start"
+    },
     bodyContainer: {
         flex: 1,
-        justifyContent: "center", 
-        alignItems: "center",
-        textAlign: "center"
+        marginHorizontal: 0,
+        paddingHorizontal: 0,
+        marginVertical: 0,
+    },
+    rightContainer: {
+        flex: 1, 
+        justifyContent: "flex-end"
     },
     bodyContainerTitle:{
         color: "#425563",
@@ -58,7 +67,7 @@ const styles = StyleSheet.create({
         fontSize: 30
     },
     headerContainer: {
-        flexDirection: "row",
+       paddingTop: 20,
     },
     flex: {
         flex: 1
