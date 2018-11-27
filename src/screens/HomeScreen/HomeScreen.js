@@ -148,15 +148,16 @@ const markers = [
 const { height } = Dimensions.get('window');
 const mainHeight = height - 50; 
 let isLargeDevice = (height > 700) ? true : false;
-let flexStyle = isLargeDevice ? {flex: 0.8} : {flex: 0.6}
-let mapHeight = mainHeight * flexStyle.flex;
+let mapFlexStyle = isLargeDevice ? {flex: 0.8} : {flex: 0.6}
+let contactFlexStyle = isLargeDevice ? {flex: 0.5} : {flex: 0.4}
+let mapHeight = mainHeight * mapFlexStyle.flex;
 
 class HomeScreen extends Component {
     constructor(props) {
         super(props);
     }
     render() {
-        console.log({mainHeight}, {height}, mainHeight * flexStyle.flex)
+        console.log({height}, {isLargeDevice}, mainHeight * mapFlexStyle.flex)
         return (
             <Container>
                 <Header 
@@ -165,18 +166,18 @@ class HomeScreen extends Component {
                     showCenter
                     showLeft
                     showRight
-                    styleContainer= {isLargeDevice ? {marginVertical: 10} : {marginVertical: 5}}
+                    //styleContainer= {isLargeDevice ? {marginVertical: 10} : {marginVertical: 5}}
                     bodyComponent={<Image source={require('../../../assets/logo.png')} style={{height: 40, width: 160, flex :1}}/>}
                 />
                 <View style={{height: mainHeight}}>
-                    <View style={{flex: 0.4}}>
+                    <View style={contactFlexStyle}>
                         <View style={styles.titleText}>
                             <Text style={styles.recentContactText}>Recent Contacts</Text>
                             <UserSlider items={contacts} />
                             <CardScroll items={cardArray} />
                         </View>
                     </View>
-                    <View style={flexStyle}>
+                    <View style={mapFlexStyle}>
                         <GoogleMap 
                             defaultRegion={{
                                 latitude: 41.881832,

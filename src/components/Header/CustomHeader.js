@@ -58,8 +58,8 @@ const styles = StyleSheet.create({
         fontSize: 30
     },
     headerContainer: {
-        flexDirection: "row",
-        backgroundColor: "red"
+        paddingTop: 18,
+        height: 65
     },
     flex: {
         flex: 1
