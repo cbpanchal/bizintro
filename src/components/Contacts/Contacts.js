@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
         flexWrap: "wrap",
         flexDirection: "row",
         justifyContent: "center",
-        paddingTop: 15,
+        paddingTop: 10,
         flex: 0.3
     },
     flatListContainer:{
