@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { StyleSheet, TouchableOpacity } from 'react-native'
-import { Container, Content, View, Text, Icon, Item, Label } from "native-base";
+import { StyleSheet, Dimensions } from 'react-native'
+import { Container, View, Text, Icon, Item, Label } from "native-base";
 import Switch from 'react-native-switch-pro'
 
 import ScrollView from "../ScrollView";
@@ -9,10 +9,14 @@ import Items from "../Contacts/Items";
 import Button from '../Button/Button';
 import Header from "../Header/CustomHeader";
 import Card from '../Card/CardBox';
+import getScreenSize from '../../util/ScreenSize';
+
+const { height, width } = Dimensions.get("window");
+const deviceSize = getScreenSize(height);
 
 const items = [
   {
-    uri: "https://assets.entrepreneur.com/images/misc/1485878297_Tai%20Lopez.png"
+    imageSrc: "https://assets.entrepreneur.com/images/misc/1485878297_Tai%20Lopez.png"
   },  
 ];
 
@@ -69,22 +73,22 @@ export default class ModalViewContainer extends Component {
                   data={items}
                   extraData={items}
                   keyExtractor={(value , key) => key.toString()}
-                  renderItem={(item) => <Items item={item} avatar thumbnailContainerStyle={styles.thumbnailContainer} />}
+                  renderItem={(item) => <Items item={item} avatar thumbnailContainerStyle={styles.thumbnailContainer} isModal={true} />}
                 />
             </ScrollView>
             <View style={styles.cardContainer}>
-              <Card text="Quick Coffee Chat" style={{fontSize: 30}}/>
+              <Card text="Quick Coffee Chat" style={styles.eventTitle}/>
               <Card text="1 hour" style={{fontSize: 20}} styleContainer={styles.timeCard}/>
             </View>
             <View style={styles.squareCardContainer}>
-              <Card isCardSquare styleContainer={styles.cardBox} name="From" date="Nov 17" time="11:30am"/>
+              <Card isCardSquare styleContainer={styles.cardBox} name="From" date="Nov 17" time="11:30am" cardStyle={styles.cardStyle}/>
               <Icon 
                 type="MaterialCommunityIcons" 
                 name="arrow-right" 
                 style={styles.arrowRight}
                 iconStyle={styles.iconSize}
               />
-              <Card isCardSquare styleContainer={styles.cardBox} name="To" date="Nov 17" time="12:30am"/>
+              <Card isCardSquare styleContainer={styles.cardBox} name="To" date="Nov 17" time="12:30am" cardStyle={styles.cardStyle}/>
             </View>
             <View style={styles.descriptionContainer}>
               <Card text="Let’s chat quickly about the chances of partnering on the green project." style={styles.desc}/>
@@ -158,6 +162,12 @@ const styles = StyleSheet.create({
   },
   cardBox: {
     flex: 4
+  },
+  eventTitle: {
+    fontSize: deviceSize === "isVerySmall" ? 20 : 30
+  },
+  cardStyle: {
+    height: 130
   },
   arrowRight: {
     color: "#cbc9d5", 

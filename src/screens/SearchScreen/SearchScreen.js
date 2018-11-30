@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { Modal } from 'react-native';
 import ModalView from '../../components/Modal/ModalView';
 import { Text, StyleSheet, Dimensions, Image } from 'react-native';
 import { Container, Content, Icon, View} from "native-base";
 import PlusIcon from "../../components/Fabs/Plus"
 import Header from "../../components/Header/CustomHeader";
 import Calendar from "../../components/Calendar"
+import Modal from '../../components/Modal/index';
 import Button from '../../components/Button/Button';
 import ReservationsList from "../../components/Events";
 

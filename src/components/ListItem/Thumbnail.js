@@ -1,15 +1,40 @@
 import React  from 'react';
-import { Dimensions } from 'react-native';
-import { Thumbnail } from "native-base";
+import { StyleSheet } from 'react-native';
+import { Thumbnail, View, Text, Icon } from "native-base";
+import Button from '../Button/Button';
+import thumbnailStyle from '../../styles/thumbnailStyle';
 
-const { height } = Dimensions.get("window");
-let isLargeDevice = (height > 700) ? true : false;
-let thumbnailSize = !isLargeDevice ? {height: 45, width: 45} : {height: 60, width: 60}
-
-const Component = ({...props}) => {
+const Component = ({isSecondaryContacts, isModal, ...props}) => {
     return (
-        <Thumbnail {...props} style={[thumbnailSize, {backgroundColor: "#eee"}]} />
+        <View style={{flexDirection: "row"}}>
+            <Thumbnail {...props} style={[thumbnailStyle, {backgroundColor: "#eee"}]} />
+            {(isModal || isSecondaryContacts) &&
+                <View style={styles.removeIconContainer}>
+                    <Button styleContainer={styles.removeButton}>
+                        <Icon type="MaterialCommunityIcons" name="minus" style={styles.removeIcon}/>
+                    </Button>
+                </View>
+            }
+        </View>
     );
 };
+
+const styles = StyleSheet.create({
+    removeIconContainer: {
+        position: "absolute",
+        bottom: -2,
+        right: -2,
+        borderRadius: 100,
+    },
+    removeButton: {
+        backgroundColor: "#fff",
+        elevation: 10,
+        borderRadius: 100,
+    },
+    removeIcon: {
+        color: "#cbc9d5", 
+        fontSize: 20,
+    }
+});
 
 export default Component;

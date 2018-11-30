@@ -1,20 +1,46 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Dimensions } from 'react-native';
 import MapView from 'react-native-maps';
 import Marker from "./MarkerItem";
+import CustomMarker from './CustomMarker';
+import getScreenSize from '../../util/ScreenSize';
 
-const GoogleMap = ({items, defaultRegion, mapHeight, ...props}) => {
+const { height } = Dimensions.get("window");
+const deviceSize = getScreenSize(height);
+
+let defaultMapHeightHome, mapStyle;
+
+const GoogleMap = ({items, zoomEnabled, isHome, markerImage, showsCompass, defaultRegion, changedRegion, mapHeight, customMapStyle, ...props}) => {
+    defaultMapHeightHome = deviceSize === "isVeryLarge" ? 225 : deviceSize === "isLarge" ? 180 : 95
+    mapStyle = isHome && { height: mapHeight - defaultMapHeightHome} || { flex: 1 }
     return (
-        <View style={[styles.container, {height: mapHeight}]}>
+        <View style={[styles.container, mapStyle ]}>
             <MapView
                 style={styles.mapView}
-                zoomEnabled
-                region={defaultRegion}
+                zoomEnabled={zoomEnabled}
+                showsCompass={showsCompass}
+                region={changedRegion}
+                initialRegion={defaultRegion}
+                customMapStyle= {customMapStyle}
+                showsUserLocation
             >
-            {
-                items.map((item, key) => {
-                    return(<Marker {...item} key={key}/>)
-                })
+            { items &&
+                items.map((item, key) => (
+                    isHome ? 
+                            <Marker 
+                                {...item} 
+                                image={item.imageSrc}
+                                key={key}
+                            />
+                        : 
+                            <CustomMarker 
+                                {...item} 
+                                image={markerImage}
+                                key={key}
+                                item={item}
+                            />
+                    )
+                )
             }
             </MapView>
         </View>

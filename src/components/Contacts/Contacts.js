@@ -9,7 +9,7 @@ class Contacts extends Component {
         this.state = {};
     }
     render() {
-        const { items } = this.props;
+        const { items, isButtonThumbnail, handleMarker, isModal } = this.props;
         return (
             <View style={styles.scrollViewContainer} >
                 <FlatList 
@@ -19,7 +19,14 @@ class Contacts extends Component {
                     data={items}
                     extraData={items}
                     keyExtractor={(value , key) => key.toString()}
-                    renderItem={(item) => <Items item={item} avatar thumbnailContainerStyle={styles.thumbnailContainer} />}
+                    renderItem={(item) => 
+                        <Items 
+                            item={item} 
+                            avatar thumbnailContainerStyle={styles.thumbnailContainer} 
+                            isButtonThumbnail={isButtonThumbnail}
+                            handleMarker={handleMarker}
+                            isModal={isModal}
+                         />}
                 />
             </View>
         );

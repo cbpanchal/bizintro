@@ -8,40 +8,40 @@ import GoogleMap from '../../components/GoogleMap'
 
 const contacts = [
     {
-        uri: "https://assets.entrepreneur.com/images/misc/1485878297_Tai%20Lopez.png"
+        imageSrc: "https://assets.entrepreneur.com/images/misc/1485878297_Tai%20Lopez.png"
     },
     {
-        uri: "https://digitalmarketer.id/wp-content/uploads/2017/02/31.jpg"
+        imageSrc: "https://digitalmarketer.id/wp-content/uploads/2017/02/31.jpg"
     },
     {
-        uri: "https://banner2.kisspng.com/20180401/jeq/kisspng-tai-lopez-investor-business-adviser-entrepreneursh-entrepreneur-5ac112da1d0ea0.3948194615226027141191.jpg"
+        imageSrc: "https://banner2.kisspng.com/20180401/jeq/kisspng-tai-lopez-investor-business-adviser-entrepreneursh-entrepreneur-5ac112da1d0ea0.3948194615226027141191.jpg"
     },
     {
-        uri: "http://www.tomferry.com/wp-content/uploads/2017/05/tom-oracle.png"
+        imageSrc: "http://www.tomferry.com/wp-content/uploads/2017/05/tom-oracle.png"
     },
     {
-        uri: "https://assets.entrepreneur.com/images/misc/1494364563_Gary%20Vaynerchuk2.png"
+        imageSrc: "https://assets.entrepreneur.com/images/misc/1494364563_Gary%20Vaynerchuk2.png"
     },
     {
-        uri: "https://assets.entrepreneur.com/images/misc/1485880429_Grant%20Cardone_alt.png"
+        imageSrc: "https://assets.entrepreneur.com/images/misc/1485880429_Grant%20Cardone_alt.png"
     },
     {
-        uri: "https://assets.entrepreneur.com/images/misc/1485878297_Tai%20Lopez.png"
+        imageSrc: "https://assets.entrepreneur.com/images/misc/1485878297_Tai%20Lopez.png"
     },
     {
-        uri: "https://digitalmarketer.id/wp-content/uploads/2017/02/31.jpg"
+        imageSrc: "https://digitalmarketer.id/wp-content/uploads/2017/02/31.jpg"
     },
     {
-        uri: "https://banner2.kisspng.com/20180401/jeq/kisspng-tai-lopez-investor-business-adviser-entrepreneursh-entrepreneur-5ac112da1d0ea0.3948194615226027141191.jpg"
+        imageSrc: "https://banner2.kisspng.com/20180401/jeq/kisspng-tai-lopez-investor-business-adviser-entrepreneursh-entrepreneur-5ac112da1d0ea0.3948194615226027141191.jpg"
     },
     {
-        uri: "http://www.tomferry.com/wp-content/uploads/2017/05/tom-oracle.png"
+        imageSrc: "http://www.tomferry.com/wp-content/uploads/2017/05/tom-oracle.png"
     },
     {
-        uri: "https://assets.entrepreneur.com/images/misc/1494364563_Gary%20Vaynerchuk2.png"
+        imageSrc: "https://assets.entrepreneur.com/images/misc/1494364563_Gary%20Vaynerchuk2.png"
     },
     {
-        uri: "https://assets.entrepreneur.com/images/misc/1485880429_Grant%20Cardone_alt.png"
+        imageSrc: "https://assets.entrepreneur.com/images/misc/1485880429_Grant%20Cardone_alt.png"
     },
 ];
 const cardArray = [
@@ -105,7 +105,7 @@ const markers = [
       },
       title: 'Foo Place',
       subtitle: '1234 Foo Drive',
-      image: 'https://assets.entrepreneur.com/images/misc/1485878297_Tai%20Lopez.png'
+      imageSrc: 'https://assets.entrepreneur.com/images/misc/1485878297_Tai%20Lopez.png'
     },
     {
       latlon: {
@@ -114,7 +114,7 @@ const markers = [
       },
       title: 'Foo Place2',
       subtitle: '1234 Foo Drive2',
-      image: 'https://digitalmarketer.id/wp-content/uploads/2017/02/31.jpg'
+      imageSrc: 'https://digitalmarketer.id/wp-content/uploads/2017/02/31.jpg'
     },
     {
       latlon: {
@@ -123,7 +123,7 @@ const markers = [
       },
       title: 'Foo Place3',
       subtitle: '1234 Foo Drive3',
-      image: 'https://banner2.kisspng.com/20180401/jeq/kisspng-tai-lopez-investor-business-adviser-entrepreneursh-entrepreneur-5ac112da1d0ea0.3948194615226027141191.jpg'
+      imageSrc: 'https://banner2.kisspng.com/20180401/jeq/kisspng-tai-lopez-investor-business-adviser-entrepreneursh-entrepreneur-5ac112da1d0ea0.3948194615226027141191.jpg'
     },
     {
       latlon: {
@@ -132,7 +132,7 @@ const markers = [
       },
       title: 'Foo Place4',
       subtitle: '1234 Foo Drive4',
-      image: 'http://www.tomferry.com/wp-content/uploads/2017/05/tom-oracle.png'
+      imageSrc: 'http://www.tomferry.com/wp-content/uploads/2017/05/tom-oracle.png'
     },
     {
       latlon: {
@@ -141,7 +141,7 @@ const markers = [
       },
       title: 'Foo Place5',
       subtitle: '1234 Foo Drive5',
-      image: 'https://assets.entrepreneur.com/images/misc/1494364563_Gary%20Vaynerchuk2.png'
+      imageSrc: 'https://assets.entrepreneur.com/images/misc/1494364563_Gary%20Vaynerchuk2.png'
     },
   ];
 
@@ -173,7 +173,7 @@ class HomeScreen extends Component {
                     <View style={contactFlexStyle}>
                         <View style={styles.titleText}>
                             <Text style={styles.recentContactText}>Recent Contacts</Text>
-                            <UserSlider items={contacts} />
+                            <UserSlider items={contacts}/>
                             <CardScroll items={cardArray} />
                         </View>
                     </View>
@@ -187,6 +187,9 @@ class HomeScreen extends Component {
                             }}
                             items={markers}
                             mapHeight={mapHeight}
+                            zoomEnabled= {true}
+                            showsCompass={true}
+                            isHome= {true}
                         />
                     </View>
                 </View>

@@ -1,8 +1,12 @@
 import React from 'react'
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 import { Text, Card, CardItem, Body } from "native-base";
+import getScreenSize from '../../util/ScreenSize';
 
-const CardBox = ({ children, style, styleContainer, text, isCardSquare, name, date, time, ...props}) => 
+const { height, width } = Dimensions.get("window");
+const deviceSize = getScreenSize(height);
+
+const CardBox = ({ children, style, styleContainer, text, isCardSquare, name, date, time, color, cardStyle, ...props}) => 
   ( !isCardSquare ? 
     (
       <Card transparent {...props} style={styleContainer}>
@@ -17,15 +21,15 @@ const CardBox = ({ children, style, styleContainer, text, isCardSquare, name, da
     ) : 
     (
       <Card transparent {...props} style={styleContainer}>
-        <CardItem style={[styles.cardItemContainer, {height: 130}]}> 
+        <CardItem style={[styles.cardItemContainer, cardStyle]}> 
           <Body>
             <Text style={styles.header}>
               {name}
             </Text>
-            <Text style={styles.body}>
+            <Text style={[styles.body, styles.dateTimeStyle]}>
               {date}
             </Text>
-            <Text style={styles.footer}>
+            <Text style={[styles.footer, styles.dateTimeStyle]}>
               {time}
             </Text>
           </Body>
@@ -37,10 +41,7 @@ const CardBox = ({ children, style, styleContainer, text, isCardSquare, name, da
 const styles = StyleSheet.create({
   cardItemContainer: {
     backgroundColor: "#f5f4f7",
-    borderBottomLeftRadius: 10, 
-    borderBottomRightRadius: 10, 
-    borderTopLeftRadius: 10, 
-    borderTopRightRadius: 10,
+    borderRadius: 10,
   },
   textColor: {
     color: "#3c5468"
@@ -51,15 +52,16 @@ const styles = StyleSheet.create({
   },
   body: {
     color: "#3c5468",
-    fontSize: 25,
     fontWeight: "400",
     paddingTop: 10
   },
   footer: {
     color: "#3c5468",
-    fontSize: 25,
     paddingTop: 7,
     fontWeight: "100",
+  },
+  dateTimeStyle: {
+    fontSize: deviceSize === "isVerySmall" ? 20 : 25
   }
 })
 

@@ -43,7 +43,7 @@ const drawerStyles = {
       height: 70,
       padding: 10,
       borderTopColor: "#fff"
-    }
+    },
   },
 }
 export default createBottomTabNavigator(drawerRoutes, drawerStyles)

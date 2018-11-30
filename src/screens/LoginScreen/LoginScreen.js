@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { StyleSheet, KeyboardAvoidingView, ScrollView, StatusBar, Image } from 'react-native';
 import { Container, Button, View, Text, Form, Item, Label, Input } from 'native-base';
 import BackgroundImage from "../../components/BackgroundImage/BackgroundImage";
-import Bubble from "./Bubble";
 
 class LoginScreen extends Component {
     constructor(props) {
